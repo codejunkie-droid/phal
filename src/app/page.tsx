@@ -74,9 +74,9 @@ export default function Home() {
         style={{ fontFamily: "serif" }}
       >
         <img
-          src="/bg rmove _1750937757281.png"
+          src="/logo.png"
           alt="Phal Sutra Logo"
-          className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm"
+          className="h-12 w-12 object-contain"
         />
         {sections.map((sec) => (
           <a
@@ -99,13 +99,12 @@ export default function Home() {
       >
         {/* Left side - Logo and text content */}
         <div className="flex-1 flex flex-col items-start justify-center px-12">
-          {/* Logo with white background */}
-          <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-white rounded-full shadow-lg"></div>
+          {/* Logo */}
+          <div className="mb-8">
             <img
-              src="/phal-sutra-logo.png"
+              src="/logo.png"
               alt="Phal Sutra Logo"
-              className="h-48 w-48 object-contain drop-shadow-lg relative z-10 bg-white rounded-full p-4"
+              className="h-48 w-48 object-contain drop-shadow-lg"
             />
           </div>
           <div className="mb-6">
