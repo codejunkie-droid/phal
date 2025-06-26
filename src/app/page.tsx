@@ -66,57 +66,151 @@ export default function Home() {
       </nav>
 
       {/* Sections */}
-      <section id="home" className="scroll-mt-20 min-h-[100dvh] flex relative z-10">
-        {/* Left side - Logo and text content */}
-        <div className="flex-1 flex flex-col items-start justify-center px-12">
-          {/* Logo with transparent background */}
-          <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-white rounded-full opacity-0"></div>
-            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 rounded-full"/>
+      <section id="home" className="scroll-mt-20 min-h-[100dvh] flex relative z-10 overflow-hidden">
+        {/* Background gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-50/80 via-yellow-50/60 to-orange-50/80 backdrop-blur-sm"></div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-green-200/30 to-green-400/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-32 w-40 h-40 bg-gradient-to-br from-orange-200/30 to-yellow-400/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-br from-yellow-200/20 to-orange-300/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+
+        {/* Left side - Enhanced content */}
+        <div className="flex-1 flex flex-col items-start justify-center px-12 relative z-10">
+          {/* Floating logo with enhanced effects */}
+          <div className="mb-8 relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-yellow-400/20 rounded-full blur-xl scale-110 group-hover:scale-125 transition-transform duration-500"></div>
+            <div className="absolute inset-0 bg-white/50 rounded-full shadow-2xl animate-pulse"></div>
+            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-2xl relative z-10 rounded-full hover:scale-105 transition-transform duration-300"/>
+            <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-yellow-400 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-lg"></div>
           </div>
+          
+          {/* Enhanced badge */}
           <div className="mb-6">
-            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">🍃 Connecting India's Freshest Fruits 🍊</span>
+            <span className="inline-flex items-center px-6 py-3 rounded-2xl text-sm font-bold tracking-wider bg-gradient-to-r from-green-100 to-yellow-100 text-green-700 border-2 border-green-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 backdrop-blur-lg">
+              <span className="animate-bounce mr-2">🍃</span>
+              Connecting India's Freshest Fruits
+              <span className="animate-bounce ml-2">🍊</span>
+            </span>
           </div>
-          <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">
-            Connecting <span className="text-green-600">Freshness</span> with Retail
+          
+          {/* Enhanced title with gradient text */}
+          <h1 className="text-6xl md:text-7xl lg:text-8xl mb-8 font-black tracking-tight leading-none">
+            <span className="bg-gradient-to-r from-gray-900 via-green-800 to-gray-900 bg-clip-text text-transparent drop-shadow-lg">
+              Connecting
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 bg-clip-text text-transparent animate-pulse">
+              Freshness
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-gray-800 via-green-700 to-gray-800 bg-clip-text text-transparent">
+              with Retail
+            </span>
           </h1>
-          <span className="lux-tagline text-xl mb-8 block max-w-2xl">
-            Your trusted partner in fruit distribution for retailers. Experience seamless B2B fruit sourcing with real-time pricing and guaranteed quality.
-          </span>
-          <div className="flex gap-4 mb-8">
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
-              Download the App →
+          
+          {/* Enhanced description */}
+          <p className="text-xl md:text-2xl mb-10 text-gray-700 max-w-2xl leading-relaxed font-medium">
+            Your <span className="text-green-600 font-bold">trusted partner</span> in fruit distribution for retailers. Experience seamless 
+            <span className="text-orange-600 font-bold"> B2B fruit sourcing</span> with real-time pricing and guaranteed quality.
+          </p>
+          
+          {/* Enhanced buttons with better styling */}
+          <div className="flex flex-col sm:flex-row gap-6 mb-8">
+            <button className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+              <span className="relative z-10 flex items-center">
+                Download the App
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </button>
-            <button className="border-2 border-green-500 text-green-500 hover:bg-green-50 font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
-              Watch Demo
+            
+            <button className="group relative overflow-hidden border-3 border-green-500 text-green-600 hover:text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl bg-white/80 backdrop-blur-sm">
+              <span className="relative z-10 flex items-center">
+                Watch Demo
+                <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-600 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
+          </div>
+          
+          {/* Trust indicators */}
+          <div className="flex items-center gap-8 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="font-medium">1000+ Retailers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              <span className="font-medium">500+ Suppliers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+              <span className="font-medium">99.9% Fresh Guarantee</span>
+            </div>
           </div>
         </div>
 
-        {/* Right side - App UI */}
-        <div className="flex-1 flex flex-col items-center justify-center px-12">
-          <div className="flex justify-center relative">
-            <div className="relative bg-gradient-to-br from-green-50 to-yellow-50 rounded-3xl p-8 shadow-2xl">
-              {/* Decorative fruit icons around the phone */}
-              <div className="absolute top-4 left-4 text-2xl opacity-60">🍊</div>
-              <div className="absolute top-6 right-6 text-2xl opacity-60">🍎</div>
-              <div className="absolute bottom-4 left-6 text-2xl opacity-60">🍇</div>
-              <div className="absolute bottom-6 right-4 text-2xl opacity-60">🥝</div>
+        {/* Right side - Enhanced App UI with 3D effect */}
+        <div className="flex-1 flex flex-col items-center justify-center px-12 relative z-10">
+          <div className="relative group">
+            {/* Enhanced glowing background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-green-400/30 via-yellow-400/30 to-orange-400/30 rounded-3xl blur-2xl scale-110 group-hover:scale-125 transition-transform duration-500"></div>
+            
+            {/* Main container with glassmorphism */}
+            <div className="relative bg-gradient-to-br from-white/40 to-green-50/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30">
+              {/* Floating decorative elements */}
+              <div className="absolute top-4 left-4 text-3xl opacity-70 animate-bounce" style={{animationDelay: '0s'}}>🍊</div>
+              <div className="absolute top-6 right-6 text-3xl opacity-70 animate-bounce" style={{animationDelay: '0.5s'}}>🍎</div>
+              <div className="absolute bottom-4 left-6 text-3xl opacity-70 animate-bounce" style={{animationDelay: '1s'}}>🍇</div>
+              <div className="absolute bottom-6 right-4 text-3xl opacity-70 animate-bounce" style={{animationDelay: '1.5s'}}>🥝</div>
+              <div className="absolute top-1/2 left-2 text-2xl opacity-50 animate-bounce" style={{animationDelay: '2s'}}>🥭</div>
+              <div className="absolute top-1/2 right-2 text-2xl opacity-50 animate-bounce" style={{animationDelay: '2.5s'}}>🍓</div>
 
-              {/* Phone mockup */}
-              <div className="relative bg-black rounded-3xl p-3 shadow-xl">
-                <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-80 w-56 flex flex-col items-center justify-center">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
-                      <span className="text-white text-2xl">🍎</span>
+              {/* Enhanced phone mockup */}
+              <div className="relative transform perspective-1000 hover:rotateY-5 transition-transform duration-500">
+                <div className="bg-gradient-to-br from-gray-900 to-black rounded-3xl p-4 shadow-2xl">
+                  {/* Phone screen */}
+                  <div className="bg-gradient-to-br from-green-50 via-yellow-50 to-orange-50 rounded-2xl p-8 h-96 w-64 flex flex-col items-center justify-center relative overflow-hidden">
+                    {/* Screen content */}
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-100/50 to-yellow-100/50"></div>
+                    
+                    <div className="relative z-10 mb-8">
+                      <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform">
+                        <span className="text-white text-3xl animate-pulse">🍎</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="font-black text-2xl text-gray-800 mb-3 text-center">Phal Sutra App</h3>
+                    <p className="text-base text-gray-600 text-center mb-8 px-4 leading-relaxed">Fresh fruits at your fingertips with guaranteed quality</p>
+                    
+                    {/* App indicators */}
+                    <div className="flex gap-2 mb-4">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                    </div>
+                    
+                    {/* Mini feature cards */}
+                    <div className="grid grid-cols-2 gap-2 w-full px-2">
+                      <div className="bg-white/60 rounded-lg p-2 text-center shadow-sm">
+                        <div className="text-lg mb-1">🛒</div>
+                        <div className="text-xs font-medium text-gray-700">Order</div>
+                      </div>
+                      <div className="bg-white/60 rounded-lg p-2 text-center shadow-sm">
+                        <div className="text-lg mb-1">📊</div>
+                        <div className="text-xs font-medium text-gray-700">Analytics</div>
+                      </div>
                     </div>
                   </div>
-                  <h3 className="font-bold text-xl text-gray-800 mb-2">Phal Sutra App</h3>
-                  <p className="text-sm text-gray-600 text-center mb-6">Fresh fruits at your fingertips</p>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                  
+                  {/* Home indicator */}
+                  <div className="flex justify-center mt-2">
+                    <div className="w-32 h-1 bg-white rounded-full"></div>
                   </div>
                 </div>
               </div>
