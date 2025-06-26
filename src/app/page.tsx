@@ -26,24 +26,24 @@ export default function Home() {
       </nav>
       {/* Sections */}
       <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10">
-        {/* Left side - Logo and text content (bigger) */}
-        <div className="flex-1 flex flex-col items-center justify-center px-8">
-          {/* Logo - bigger */}
+        {/* Left side - Logo and text content */}
+        <div className="flex-1 flex flex-col items-start justify-center px-12">
+          {/* Logo */}
           <div className="mb-8">
             <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg"/>
           </div>
           <div className="mb-6">
             <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
           </div>
-          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg text-center">Phal Sutra</h1>
-          <span className="lux-tagline text-2xl mb-8 block text-center">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Phal Sutra</h1>
+          <span className="lux-tagline text-2xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
           <div className="flex gap-4">
             <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
           </div>
         </div>
 
-        {/* Right side - Download content (moved up and right) */}
-        <div className="absolute top-16 right-8 flex flex-col items-center max-w-sm">
+        {/* Right side - Download content */}
+        <div className="flex-1 flex flex-col items-center justify-center px-12">
           <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
           <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
           <div className="flex flex-row gap-4 justify-center items-center mb-6">
