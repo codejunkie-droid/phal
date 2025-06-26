@@ -91,33 +91,130 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right side - App UI */}
-        <div className="flex-1 flex flex-col items-center justify-center px-12">
-          <div className="flex justify-center relative">
-            <div className="relative bg-gradient-to-br from-green-50 to-yellow-50 rounded-3xl p-8 shadow-2xl">
-              {/* Decorative fruit icons around the phone */}
-              <div className="absolute top-4 left-4 text-2xl opacity-60">🍊</div>
-              <div className="absolute top-6 right-6 text-2xl opacity-60">🍎</div>
-              <div className="absolute bottom-4 left-6 text-2xl opacity-60">🍇</div>
-              <div className="absolute bottom-6 right-4 text-2xl opacity-60">🥝</div>
-              
-              {/* Phone mockup */}
-              <div className="relative bg-black rounded-3xl p-3 shadow-xl">
-                <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-80 w-56 flex flex-col items-center justify-center">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
-                      <span className="text-white text-2xl">🍎</span>
+        {/* Right side - Enhanced App UI Section */}
+        <div className="flex-1 flex flex-col items-center justify-center px-12 relative">
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 overflow-hidden opacity-20">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-green-200 to-yellow-200 rounded-full blur-xl"></div>
+            <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-orange-200 to-red-200 rounded-full blur-xl"></div>
+            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-xl"></div>
+          </div>
+
+          {/* Main content container */}
+          <div className="relative z-10 flex flex-col items-center space-y-8">
+            {/* Top section with stats */}
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-100 text-center transform hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+                <div className="text-sm text-gray-600">Happy Retailers</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100 text-center transform hover:scale-105 transition-all">
+                <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
+                <div className="text-sm text-gray-600">Fruit Varieties</div>
+              </div>
+            </div>
+
+            {/* Enhanced Phone mockup with surrounding elements */}
+            <div className="relative">
+              {/* Floating fruit elements around phone */}
+              <div className="absolute -top-8 -left-8 animate-bounce" style={{animationDelay: '0s'}}>
+                <div className="bg-orange-100 rounded-full p-3 shadow-lg">
+                  <span className="text-2xl">🍊</span>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-12 animate-bounce" style={{animationDelay: '1s'}}>
+                <div className="bg-red-100 rounded-full p-3 shadow-lg">
+                  <span className="text-2xl">🍎</span>
+                </div>
+              </div>
+              <div className="absolute -bottom-8 -left-12 animate-bounce" style={{animationDelay: '2s'}}>
+                <div className="bg-purple-100 rounded-full p-3 shadow-lg">
+                  <span className="text-2xl">🍇</span>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-8 animate-bounce" style={{animationDelay: '0.5s'}}>
+                <div className="bg-green-100 rounded-full p-3 shadow-lg">
+                  <span className="text-2xl">🥝</span>
+                </div>
+              </div>
+
+              {/* Main phone container with enhanced styling */}
+              <div className="relative bg-gradient-to-br from-green-50 via-yellow-50 to-orange-50 rounded-3xl p-8 shadow-2xl border border-green-200">
+                {/* Decorative patterns */}
+                <div className="absolute top-4 left-4 w-6 h-6 bg-green-200 rounded-full opacity-30"></div>
+                <div className="absolute top-8 right-4 w-4 h-4 bg-yellow-200 rounded-full opacity-40"></div>
+                <div className="absolute bottom-8 left-6 w-5 h-5 bg-orange-200 rounded-full opacity-35"></div>
+                <div className="absolute bottom-4 right-6 w-3 h-3 bg-red-200 rounded-full opacity-45"></div>
+                
+                {/* Phone mockup */}
+                <div className="relative bg-gradient-to-b from-gray-800 to-black rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  {/* Phone screen */}
+                  <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-96 w-64 flex flex-col items-center justify-center relative overflow-hidden">
+                    {/* Background pattern on screen */}
+                    <div className="absolute inset-0 opacity-10">
+                      <div className="absolute top-4 left-4 text-4xl">🍃</div>
+                      <div className="absolute top-12 right-8 text-3xl">🌿</div>
+                      <div className="absolute bottom-12 left-6 text-3xl">🍃</div>
+                      <div className="absolute bottom-4 right-4 text-4xl">🌿</div>
                     </div>
-                  </div>
-                  <h3 className="font-bold text-xl text-gray-800 mb-2">Phal Sutra App</h3>
-                  <p className="text-sm text-gray-600 text-center mb-6">Fresh fruits at your fingertips</p>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    
+                    {/* Screen content */}
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="mb-6">
+                        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse">
+                          <span className="text-white text-3xl">🍎</span>
+                        </div>
+                      </div>
+                      <h3 className="font-bold text-2xl text-gray-800 mb-2">Phal Sutra App</h3>
+                      <p className="text-sm text-gray-600 text-center mb-6 px-4">Fresh fruits at your fingertips with real-time pricing</p>
+                      
+                      {/* App interface elements */}
+                      <div className="w-full px-4 space-y-3 mb-6">
+                        <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
+                          <div className="w-4 h-4 bg-green-400 rounded-full"></div>
+                          <div className="text-xs text-gray-600">Fresh Apples - ₹120/kg</div>
+                        </div>
+                        <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
+                          <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
+                          <div className="text-xs text-gray-600">Oranges - ₹80/kg</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+                        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Bottom section with features */}
+            <div className="grid grid-cols-3 gap-4 mt-8">
+              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
+                <div className="text-2xl mb-2">⚡</div>
+                <div className="text-xs text-gray-600 font-medium">Fast Delivery</div>
+              </div>
+              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
+                <div className="text-2xl mb-2">🔒</div>
+                <div className="text-xs text-gray-600 font-medium">Secure Payment</div>
+              </div>
+              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
+                <div className="text-2xl mb-2">✨</div>
+                <div className="text-xs text-gray-600 font-medium">Premium Quality</div>
+              </div>
+            </div>
+
+            {/* Call to action badges */}
+            <div className="flex gap-4 mt-6">
+              <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200 animate-pulse">
+                📱 Download Now
+              </span>
+              <span className="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold border border-orange-200">
+                🎯 Join 500+ Retailers
+              </span>
             </div>
           </div>
         </div>
