@@ -1,3 +1,4 @@
+
 import React from "react";
 
 // Section anchors
@@ -61,71 +62,47 @@ export default function Home() {
         {/* FEATURES CONTENT will go here */}
         <div className="flex flex-col items-center max-w-4xl w-full px-6 py-14 gap-10 lux-blur-bg shadow-xl rounded-2xl border border-gold-500">
           <h2 className="lux-header text-3xl md:text-4xl mb-1">Why Choose Phal Sutra?</h2>
-<<<<<<< HEAD
-=======
           <span className="lux-tagline mb-4 text-center">We provide everything you need to streamline your fruit sourcing and boost your business.</span>
->>>>>>> 8578076 (Initial commit)
           <div className="grid md:grid-cols-3 gap-8 pt-8">
             {/* Feature 1 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://same-assets.com/ai/fruits/gold-apple.png" alt="Freshest Fruits" className="h-16 mb-3 animate-float-slow" />
-<<<<<<< HEAD
-              <h3 className="font-semibold text-lg mb-2 text-gold-500">Premium Quality</h3>
-              <span className="text-zinc-700 text-center">Only the freshest, finest fruits—handpicked and delivered with care, every time.</span>
-=======
+              <img src="https://same-assets.com/ai/fruits/gold-apple.png" alt="Direct Sourcing" className="h-16 mb-3 animate-float-slow" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Direct Sourcing</h3>
               <span className="text-zinc-700 text-center">Connect directly with farmers and wholesalers for the freshest produce at competitive prices.</span>
->>>>>>> 8578076 (Initial commit)
             </div>
             {/* Feature 2 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://same-assets.com/ai/fruits/sparkle-delivery.png" alt="Timely Delivery" className="h-16 mb-3 animate-float-medium" />
-<<<<<<< HEAD
-              <h3 className="font-semibold text-lg mb-2 text-gold-500">Effortless Delivery</h3>
-              <span className="text-zinc-700 text-center">Your luxury fruit basket—on schedule, right to your doorstep, beautifully packaged.</span>
-=======
+              <img src="https://same-assets.com/ai/fruits/sparkle-delivery.png" alt="Price Comparison" className="h-16 mb-3 animate-float-medium" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Real-Time Price Comparison</h3>
               <span className="text-zinc-700 text-center">Compare prices across multiple suppliers instantly to ensure the best deals for your business.</span>
->>>>>>> 8578076 (Initial commit)
             </div>
             {/* Feature 3 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://same-assets.com/ai/fruits/diamond-variety.png" alt="Vast Variety" className="h-16 mb-3 animate-float-fast" />
-<<<<<<< HEAD
-              <h3 className="font-semibold text-lg mb-2 text-gold-500">Exquisite Variety</h3>
-              <span className="text-zinc-700 text-center">From rare jewels to everyday delights—all the world’s best fruits, just a tap away.</span>
-=======
+              <img src="https://same-assets.com/ai/fruits/diamond-variety.png" alt="Seamless Ordering" className="h-16 mb-3 animate-float-fast" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Seamless Ordering</h3>
               <span className="text-zinc-700 text-center">Place orders with just a few taps. Our intuitive interface makes bulk ordering simple and efficient.</span>
             </div>
-            {/* New Feature 4 */}
+            {/* Feature 4 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
               <img src="https://same-assets.com/ai/fruits/sparkle-delivery.png" alt="Timely Delivery" className="h-16 mb-3 animate-float-medium" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Timely Delivery</h3>
               <span className="text-zinc-700 text-center">Reliable delivery network ensures your fruits arrive fresh and on time, every time.</span>
             </div>
-            {/* New Feature 5 */}
+            {/* Feature 5 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
               <img src="https://same-assets.com/ai/fruits/gold-apple.png" alt="Quality Guarantee" className="h-16 mb-3 animate-float-slow" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Quality Guarantee</h3>
               <span className="text-zinc-700 text-center">Every fruit is quality-checked before delivery. Your satisfaction is our top priority.</span>
             </div>
-            {/* New Feature 6 */}
+            {/* Feature 6 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
               <img src="https://same-assets.com/ai/fruits/diamond-variety.png" alt="24/7 Support" className="h-16 mb-3 animate-float-fast" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">24/7 Support</h3>
               <span className="text-zinc-700 text-center">Our dedicated support team is always ready to help you with any questions or concerns.</span>
->>>>>>> 8578076 (Initial commit)
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section id="contact" className="scroll-mt-36 min-h-[60dvh] flex flex-col items-center justify-center relative z-10 pb-12">
-        {/* CONTACT CONTENT will go here */}
-      </section>
-      {/* BACKGROUND ANIMATION will be added as a separate component */}
-=======
 
       <section id="how-it-works" className="scroll-mt-36 min-h-[60dvh] flex flex-col items-center justify-center relative z-10 pb-12">
         <div className="flex flex-col items-center max-w-4xl w-full px-6 py-14 gap-8 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl">
@@ -217,7 +194,7 @@ export default function Home() {
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-message">
                   Message
                 </label>
-                <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" placeholder="Your message here..." rows="4"></textarea>
+                <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" placeholder="Your message here..." rows={4}></textarea>
               </div>
             </div>
             <div className="flex justify-center">
@@ -230,7 +207,7 @@ export default function Home() {
       </section>
       {/* BACKGROUND ANIMATION will be added as a separate component */}
       <footer className="w-full py-8 text-center text-zinc-500 text-sm bg-zinc-100 dark:bg-zinc-900">
-        <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
           <div>
             <h3 className="font-semibold text-lg text-gold-500 mb-4">Phal Sutra</h3>
             <p className="text-zinc-700 dark:text-zinc-300">Connecting freshness with retail. Your trusted partner in fruit distribution.</p>
@@ -264,7 +241,6 @@ export default function Home() {
           <p className="text-zinc-500">&copy; {new Date().getFullYear()} Phal Sutra. All rights reserved. Made with ❤️ for fresh produce retailers.</p>
         </div>
       </footer>
->>>>>>> 8578076 (Initial commit)
     </main>
   );
 }
