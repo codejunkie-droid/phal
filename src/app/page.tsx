@@ -17,46 +17,64 @@ export default function Home() {
       {/* Enhanced Falling Fruits Animation Background */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="falling-fruits-container">
-          {Array.from({ length: 25 }, (_, i) => (
+          {/* Main fruit layer with varied physics */}
+          {Array.from({ length: 35 }, (_, i) => (
             <div
               key={i}
               className={`falling-fruit fruit-${(i % 15) + 1}`}
               style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 8}s`,
+                animationDelay: `${Math.random() * 12}s`,
+                animationDuration: `${8 + Math.random() * 8}s`,
               }}
             >
-              {['🍎', '🍊', '🍌', '🥝', '🍇', '🍓', '🥭', '🍑', '🍒', '🍍', '🥥', '🍈', '🍉', '🫐', '🥑'][Math.floor(Math.random() * 15)]}
+              {['🍎', '🍊', '🍌', '🥝', '🍇', '🍓', '🥭', '🍑', '🍒', '🍍', '🥥', '🍈', '🍉', '🫐', '🥑', '🍋', '🥕', '🌶️'][Math.floor(Math.random() * 18)]}
             </div>
           ))}
-          {/* Additional layer of smaller fruits */}
-          {Array.from({ length: 15 }, (_, i) => (
+          {/* Small fruits layer */}
+          {Array.from({ length: 20 }, (_, i) => (
             <div
               key={`small-${i}`}
               className="falling-fruit"
               style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 10}s`,
+                animationDelay: `${Math.random() * 15}s`,
                 fontSize: '1.2rem',
-                animation: `fall-spiral ${12 + Math.random() * 6}s ease-in-out infinite`,
-                opacity: 0.6
+                animation: `fall-spiral ${10 + Math.random() * 8}s ease-in-out infinite`,
+                opacity: 0.7
               }}
             >
-              {['🍓', '🫐', '🍒', '🥝'][Math.floor(Math.random() * 4)]}
+              {['🍓', '🫐', '🍒', '🥝', '🍌', '🍊'][Math.floor(Math.random() * 6)]}
+            </div>
+          ))}
+          {/* Micro fruits for depth */}
+          {Array.from({ length: 15 }, (_, i) => (
+            <div
+              key={`micro-${i}`}
+              className="falling-fruit"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                fontSize: '0.8rem',
+                animation: `fall-drift ${15 + Math.random() * 10}s linear infinite`,
+                opacity: 0.4
+              }}
+            >
+              {['🍇', '🫐', '🍒'][Math.floor(Math.random() * 3)]}
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-green-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/20 via-yellow-50/20 to-green-50/20"></div>
       </div>
 
       {/* Sticky Luxurious Navigation with Logo */}
-      <nav className="fixed top-6 left-1/2 z-50 flex -translate-x-1/2 rounded-xl bg-white/70 dark:bg-black/40 backdrop-blur-lg px-6 py-2 shadow-lg gap-6 border border-zinc-100 dark:border-zinc-900 text-lg font-semibold tracking-wider items-center" style={{fontFamily: 'serif'}}>
-        <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-10 w-10 object-contain rounded-full bg-transparent"/>
+      <nav className="fixed top-6 left-1/2 z-50 flex -translate-x-1/2 rounded-2xl glass-nav px-8 py-3 gap-8 text-lg font-semibold tracking-wider items-center transition-all duration-300 hover:shadow-xl" style={{fontFamily: 'serif'}}>
+        <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-12 w-12 object-contain rounded-full bg-transparent transition-transform duration-300 hover:scale-110"/>
         {sections.map(sec => (
           <a
             key={sec.id}
             href={`#${sec.id}`}
-            className="hover:text-gold-500 transition-colors lux-nav-link"
+            className="hover:text-gold-500 transition-all duration-300 hover:scale-105 lux-nav-link relative"
           >
             {sec.label}
           </a>
@@ -67,47 +85,54 @@ export default function Home() {
       <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10">
         {/* Left side - Logo and text content */}
         <div className="flex-1 flex flex-col items-start justify-center px-12">
-          {/* Logo with transparent background */}
-          <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-white rounded-full opacity-0"></div>
-            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 rounded-full"/>
+          {/* Logo with glassmorphism background */}
+          <div className="mb-8 relative glass-float">
+            <div className="absolute inset-0 glass-hero rounded-full scale-110 opacity-60"></div>
+            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-2xl relative z-10 rounded-full border-4 border-white/30"/>
           </div>
           <div className="mb-6">
-            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+            <span className="px-6 py-3 rounded-2xl uppercase text-sm tracking-widest neuro-button text-gold-500 font-bold transition-all duration-300 hover:scale-105">Fruits redefined</span>
           </div>
-          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-          <span className="lux-tagline text-2xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+          <div className="glass-hero rounded-3xl p-8 mb-8">
+            <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-2xl">Phal Sutra</h1>
+            <span className="lux-tagline text-2xl block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+          </div>
           <div className="flex gap-4">
-            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Premium fruit basket"/>
+            <div className="glass-effect rounded-2xl p-4 transition-all duration-300 hover:scale-105">
+              <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/50" alt="Premium fruit basket"/>
+            </div>
           </div>
         </div>
 
         {/* Right side - App UI */}
         <div className="flex-1 flex flex-col items-center justify-center px-12">
-          <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Experience Our App</h2>
-          <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-          <div className="flex flex-row gap-4 justify-center items-center mb-8">
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto drop-shadow-xl"/>
+          <div className="glass-hero rounded-3xl p-8 mb-8 text-center">
+            <h2 className="lux-header text-2xl md:text-3xl mb-4">Experience Our App</h2>
+            <span className="lux-tagline mb-6 block">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
+          </div>
+          <div className="flex flex-row gap-6 justify-center items-center mb-12">
+            <a href="#" className="neuro-button rounded-2xl p-4 transition-all duration-300 hover:scale-110 inline-block">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto"/>
             </a>
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-16 w-auto drop-shadow-xl"/>
+            <a href="#" className="neuro-button rounded-2xl p-4 transition-all duration-300 hover:scale-110 inline-block">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 w-auto"/>
             </a>
           </div>
-          <div className="flex justify-center relative mt-4">
-            <div className="relative">
+          <div className="flex justify-center relative">
+            <div className="relative glass-float">
+              <div className="absolute inset-0 glass-hero rounded-3xl scale-105 opacity-40 blur-sm"></div>
               <img 
                 src="/phal-sutra-app-mockup.png" 
                 alt="Phal Sutra Mobile App" 
-                className="h-80 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white object-contain bg-white"
+                className="h-96 md:h-[28rem] w-auto block rounded-3xl shadow-2xl border-4 border-white/50 object-contain bg-white/20 backdrop-blur-sm relative z-10"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = "/app-ui-phone.png";
                 }}
                 onLoad={() => console.log('App mockup loaded successfully')}
               />
-              {/* Fallback if both images fail */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-100 to-yellow-100 rounded-3xl border-4 border-white shadow-2xl opacity-0 transition-opacity duration-300" 
+              {/* Enhanced fallback with glassmorphism */}
+              <div className="absolute inset-0 flex items-center justify-center glass-hero rounded-3xl opacity-0 transition-opacity duration-300" 
                    style={{display: 'none'}} 
                    id="fallback-placeholder">
                 <div className="text-center p-8">
