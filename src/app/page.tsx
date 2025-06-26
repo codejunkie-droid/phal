@@ -30,8 +30,8 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-center max-w-6xl w-full px-6 py-28 sm:py-32 gap-12">
           {/* Left side - Text content */}
           <div className="flex flex-col items-center text-center flex-1">
-            {/* Logo with white overlay background */}
-            <div className="mb-8 p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50">
+            {/* Logo */}
+            <div className="mb-8">
               <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-32 w-32 object-contain drop-shadow-lg"/>
             </div>
             <div className="mb-6">
