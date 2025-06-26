@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
             {/* Logo */}
             <div className="mb-8">
-              <img src="/attached_assets/logo phal_1750928811848.jpeg" alt="Phal Sutra Logo" className="h-24 w-24 object-contain drop-shadow-lg"/>
+              <img src="/attached_assets/logo%20phal_1750928811848.jpeg" alt="Phal Sutra Logo" className="h-24 w-24 object-contain drop-shadow-lg"/>
             </div>
             <div className="mb-4">
               <span className="px-4 py-2 rounded-xl uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
