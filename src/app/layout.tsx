@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Phal Sutra - Luxurious Fruit App",
   description: "An app that delivers every fruit luxury to your doorstep. Stay healthy, taste luxury. Download now.",
   icons: {
-    icon: "/attached_assets/Favicon_1750928811848.png"
+    icon: "/favicon.png"
   }
 };
 
