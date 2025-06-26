@@ -138,7 +138,7 @@ export default function Home() {
           </div>
 
           {/* Feature highlights below phone - arranged in rows */}
-          <div className="absolute bottom-[-120px] left-1/2 transform -translate-x-1/2 z-40 w-full max-w-4xl">
+          <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 z-40 w-full max-w-4xl">
             {/* First row - 3 features */}
             <div className="flex justify-center gap-6 mb-4">
               <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-blue-200 flex items-center gap-3 animate-float-slow hover:scale-105 transition-all duration-300 cursor-pointer">
