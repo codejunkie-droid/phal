@@ -64,7 +64,7 @@ export default function Home() {
       </nav>
 
       {/* Sections */}
-      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10">
+      <section id="home" className="scroll-mt-20 min-h-[100dvh] flex relative z-10">
         {/* Left side - Logo and text content */}
         <div className="flex-1 flex flex-col items-start justify-center px-12">
           {/* Logo with transparent background */}
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="scroll-mt-36 min-h-[80dvh] flex flex-col items-center justify-center relative z-10 py-20">
+      <section id="features" className="scroll-mt-20 min-h-[80dvh] flex flex-col items-center justify-center relative z-10 py-20">
         {/* Background overlay with floating fruits */}
         <div className="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-yellow-50/30 to-green-50/30 rounded-3xl mx-8">
           <div className="absolute top-10 left-10 text-4xl opacity-20 leaf-float">🍃</div>
@@ -200,7 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="scroll-mt-36 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
+      <section id="how-it-works" className="scroll-mt-20 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
         {/* Background overlay with floating fruits */}
         <div className="absolute inset-0 bg-gradient-to-l from-green-50/30 via-yellow-50/30 to-orange-50/30 rounded-3xl mx-8">
           <div className="absolute top-16 left-16 text-3xl opacity-20 leaf-float">🍌</div>
@@ -232,7 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-36 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
+      <section id="contact" className="scroll-mt-20 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
         {/* Background overlay with floating fruits */}
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 via-orange-50/30 to-red-50/30 rounded-3xl mx-8">
           <div className="absolute top-12 left-12 text-4xl opacity-25 leaf-float">🍓</div>
