@@ -73,47 +73,49 @@ export default function Home() {
             <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 rounded-full"/>
           </div>
           <div className="mb-6">
-            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">🍃 Connecting India's Freshest Fruits 🍊</span>
           </div>
-          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-          <span className="lux-tagline text-2xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-          <div className="flex gap-4">
-            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Premium fruit basket"/>
+          <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">
+            Connecting <span className="text-green-600">Freshness</span> with Retail
+          </h1>
+          <span className="lux-tagline text-xl mb-8 block max-w-2xl">
+            Your trusted partner in fruit distribution for retailers. Experience seamless B2B fruit sourcing with real-time pricing and guaranteed quality.
+          </span>
+          <div className="flex gap-4 mb-8">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+              Download the App →
+            </button>
+            <button className="border-2 border-green-500 text-green-500 hover:bg-green-50 font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+              Watch Demo
+            </button>
           </div>
         </div>
 
         {/* Right side - App UI */}
         <div className="flex-1 flex flex-col items-center justify-center px-12">
-          <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Experience Our App</h2>
-          <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-          <div className="flex flex-row gap-4 justify-center items-center mb-8">
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto drop-shadow-xl"/>
-            </a>
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-16 w-auto drop-shadow-xl"/>
-            </a>
-          </div>
-          <div className="flex justify-center relative mt-4">
-            <div className="relative">
-              <img 
-                src="/phal-sutra-app-mockup.png" 
-                alt="Phal Sutra Mobile App" 
-                className="h-80 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white object-contain bg-white"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "/app-ui-phone.png";
-                }}
-                onLoad={() => console.log('App mockup loaded successfully')}
-              />
-              {/* Fallback if both images fail */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-100 to-yellow-100 rounded-3xl border-4 border-white shadow-2xl opacity-0 transition-opacity duration-300" 
-                   style={{display: 'none'}} 
-                   id="fallback-placeholder">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">📱</div>
-                  <p className="text-gray-600 font-semibold">Phal Sutra App</p>
-                  <p className="text-gray-500 text-sm">Coming Soon</p>
+          <div className="flex justify-center relative">
+            <div className="relative bg-gradient-to-br from-green-50 to-yellow-50 rounded-3xl p-8 shadow-2xl">
+              {/* Decorative fruit icons around the phone */}
+              <div className="absolute top-4 left-4 text-2xl opacity-60">🍊</div>
+              <div className="absolute top-6 right-6 text-2xl opacity-60">🍎</div>
+              <div className="absolute bottom-4 left-6 text-2xl opacity-60">🍇</div>
+              <div className="absolute bottom-6 right-4 text-2xl opacity-60">🥝</div>
+              
+              {/* Phone mockup */}
+              <div className="relative bg-black rounded-3xl p-3 shadow-xl">
+                <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-80 w-56 flex flex-col items-center justify-center">
+                  <div className="mb-6">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                      <span className="text-white text-2xl">🍎</span>
+                    </div>
+                  </div>
+                  <h3 className="font-bold text-xl text-gray-800 mb-2">Phal Sutra App</h3>
+                  <p className="text-sm text-gray-600 text-center mb-6">Fresh fruits at your fingertips</p>
+                  <div className="flex gap-1">
+                    <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                  </div>
                 </div>
               </div>
             </div>
