@@ -30,12 +30,16 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-center max-w-6xl w-full px-6 py-28 sm:py-32 gap-12">
           {/* Left side - Text content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
-            <div className="mb-6">
+            {/* Logo */}
+            <div className="mb-8">
+              <img src="/attached_assets/logo phal_1750928811848.jpeg" alt="Phal Sutra Logo" className="h-24 w-24 object-contain drop-shadow-lg"/>
+            </div>
+            <div className="mb-4">
               <span className="px-4 py-2 rounded-xl uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
             </div>
-            <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-            <span className="lux-tagline text-xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-            <div className="flex justify-center lg:justify-start gap-5 mt-4">
+            <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-4 drop-shadow-lg">Phal Sutra</h1>
+            <span className="lux-tagline text-xl mb-6 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+            <div className="flex justify-center lg:justify-start gap-5 mt-2">
               <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-24 drop-shadow-2xl rounded-2xl border-4 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
             </div>
           </div>
