@@ -124,232 +124,55 @@
     animation: float-fast 2s ease-in-out infinite;
   }
 
-  /* Enhanced Falling Fruits Animation */
+  /* Falling Fruits Animation */
   .falling-fruits-container {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none;
   }
 
   .falling-fruit {
     position: absolute;
     font-size: 2rem;
     animation: fall linear infinite;
-    opacity: 0;
+    opacity: 0.7;
     z-index: 0;
-    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2)) 
-            drop-shadow(0 4px 8px rgba(255,165,0,0.3))
-            blur(0.2px);
-    text-shadow: 0 4px 8px rgba(0,0,0,0.15),
-                 0 2px 4px rgba(255,255,255,0.5),
-                 0 0 20px rgba(255,165,0,0.4);
-    transform-origin: center;
-    will-change: transform, opacity;
   }
 
   @keyframes fall {
     0% {
-      transform: translateY(-200px) translateX(0px) rotate(0deg) scale(0.3);
+      transform: translateY(-100px) rotate(0deg);
       opacity: 0;
-      filter: blur(2px) brightness(0.5);
     }
-    3% {
-      opacity: 0.6;
-      transform: translateY(-150px) translateX(8px) rotate(25deg) scale(0.5);
-      filter: blur(1.5px) brightness(0.7);
-    }
-    8% {
-      opacity: 0.85;
-      transform: translateY(-80px) translateX(-12px) rotate(65deg) scale(0.75);
-      filter: blur(1px) brightness(0.9);
-    }
-    15% {
-      opacity: 1;
-      transform: translateY(5vh) translateX(18px) rotate(120deg) scale(1);
-      filter: blur(0px) brightness(1);
-    }
-    25% {
-      transform: translateY(20vh) translateX(-25px) rotate(180deg) scale(1.15);
-      filter: brightness(1.1);
-    }
-    35% {
-      transform: translateY(35vh) translateX(30px) rotate(250deg) scale(1.05);
-    }
-    45% {
-      transform: translateY(50vh) translateX(-20px) rotate(320deg) scale(1.1);
-    }
-    55% {
-      transform: translateY(65vh) translateX(35px) rotate(390deg) scale(1);
-    }
-    65% {
-      transform: translateY(75vh) translateX(-15px) rotate(450deg) scale(0.95);
-      opacity: 0.9;
-    }
-    75% {
-      transform: translateY(85vh) translateX(25px) rotate(500deg) scale(0.9);
+    10% {
       opacity: 0.7;
     }
-    85% {
-      transform: translateY(92vh) translateX(-10px) rotate(540deg) scale(0.8);
-      opacity: 0.5;
-      filter: blur(0.5px) brightness(0.8);
-    }
-    95% {
-      transform: translateY(98vh) translateX(15px) rotate(580deg) scale(0.6);
-      opacity: 0.2;
-      filter: blur(1px) brightness(0.6);
+    90% {
+      opacity: 0.7;
     }
     100% {
-      transform: translateY(calc(100vh + 300px)) translateX(0px) rotate(600deg) scale(0.3);
+      transform: translateY(calc(100vh + 100px)) rotate(360deg);
       opacity: 0;
-      filter: blur(2px) brightness(0.4);
     }
   }
 
-  /* Specialized fruit animations with unique physics */
-  .fruit-1 { 
-    animation: fall-wobble 8s ease-in-out infinite; 
-    font-size: 1.8rem;
-    animation-delay: 0s;
-  }
-  .fruit-2 { 
-    animation: fall-spin 10s linear infinite; 
-    font-size: 2.4rem;
-    animation-delay: 1.2s;
-  }
-  .fruit-3 { 
-    animation: fall-bounce 9s ease-out infinite; 
-    font-size: 1.9rem;
-    animation-delay: 2.5s;
-  }
-  .fruit-4 { 
-    animation: fall-drift 11s ease-in infinite; 
-    font-size: 2.1rem;
-    animation-delay: 0.8s;
-  }
-  .fruit-5 { 
-    animation: fall-spiral 7.5s ease-in-out infinite; 
-    font-size: 2.3rem;
-    animation-delay: 3.1s;
-  }
-  .fruit-6 { 
-    animation: fall-wobble 12s linear infinite; 
-    font-size: 1.7rem;
-    animation-delay: 1.8s;
-  }
-  .fruit-7 { 
-    animation: fall-spin 9.5s ease-out infinite; 
-    font-size: 2.5rem;
-    animation-delay: 0.4s;
-  }
-  .fruit-8 { 
-    animation: fall-bounce 8.5s ease-in infinite; 
-    font-size: 1.8rem;
-    animation-delay: 2.9s;
-  }
-  .fruit-9 { 
-    animation: fall-drift 10.5s linear infinite; 
-    font-size: 2rem;
-    animation-delay: 1.6s;
-  }
-  .fruit-10 { 
-    animation: fall-spiral 7.8s ease-in-out infinite; 
-    font-size: 2.2rem;
-    animation-delay: 3.4s;
-  }
-  .fruit-11 { 
-    animation: fall-wobble 11.5s ease-out infinite; 
-    font-size: 1.9rem;
-    animation-delay: 0.6s;
-  }
-  .fruit-12 { 
-    animation: fall-spin 9.2s linear infinite; 
-    font-size: 2.1rem;
-    animation-delay: 2.2s;
-  }
-  .fruit-13 { 
-    animation: fall-bounce 8.8s ease-in infinite; 
-    font-size: 1.8rem;
-    animation-delay: 3.7s;
-  }
-  .fruit-14 { 
-    animation: fall-drift 10.8s ease-in-out infinite; 
-    font-size: 2.4rem;
-    animation-delay: 1.1s;
-  }
-  .fruit-15 { 
-    animation: fall-spiral 12.2s linear infinite; 
-    font-size: 2.6rem;
-    animation-delay: 2.8s;
-  }
-
-  /* Unique animation variations */
-  @keyframes fall-wobble {
-    0% { transform: translateY(-150px) translateX(0px) rotate(0deg) scale(0.5); opacity: 0; }
-    5% { transform: translateY(-100px) translateX(10px) rotate(15deg) scale(0.7); opacity: 0.8; }
-    15% { transform: translateY(10vh) translateX(-15px) rotate(45deg) scale(1); opacity: 0.9; }
-    25% { transform: translateY(25vh) translateX(25px) rotate(90deg) scale(1.1); }
-    35% { transform: translateY(35vh) translateX(-20px) rotate(135deg) scale(1); }
-    50% { transform: translateY(50vh) translateX(30px) rotate(200deg) scale(1.05); }
-    65% { transform: translateY(65vh) translateX(-25px) rotate(260deg) scale(0.95); }
-    80% { transform: translateY(80vh) translateX(15px) rotate(320deg) scale(1); opacity: 0.8; }
-    95% { transform: translateY(95vh) translateX(-10px) rotate(370deg) scale(0.9); opacity: 0.4; }
-    100% { transform: translateY(calc(100vh + 200px)) translateX(0px) rotate(400deg) scale(0.3); opacity: 0; }
-  }
-
-  @keyframes fall-spin {
-    0% { transform: translateY(-150px) translateX(0px) rotate(0deg) scale(0.5); opacity: 0; }
-    5% { transform: translateY(-100px) translateX(3px) rotate(30deg) scale(0.7); opacity: 0.8; }
-    15% { transform: translateY(10vh) translateX(-8px) rotate(90deg) scale(1); opacity: 0.9; }
-    25% { transform: translateY(25vh) translateX(12px) rotate(150deg) scale(1.1); }
-    35% { transform: translateY(35vh) translateX(-6px) rotate(210deg) scale(1); }
-    50% { transform: translateY(50vh) translateX(18px) rotate(300deg) scale(1.05); }
-    65% { transform: translateY(65vh) translateX(-12px) rotate(390deg) scale(0.95); }
-    80% { transform: translateY(80vh) translateX(8px) rotate(480deg) scale(1); opacity: 0.8; }
-    95% { transform: translateY(95vh) translateX(-4px) rotate(540deg) scale(0.9); opacity: 0.4; }
-    100% { transform: translateY(calc(100vh + 200px)) translateX(0px) rotate(600deg) scale(0.3); opacity: 0; }
-  }
-
-  @keyframes fall-bounce {
-    0% { transform: translateY(-150px) translateX(0px) rotate(0deg) scale(0.5); opacity: 0; }
-    5% { transform: translateY(-100px) translateX(-5px) rotate(10deg) scale(0.7); opacity: 0.8; }
-    15% { transform: translateY(10vh) translateX(20px) rotate(35deg) scale(1); opacity: 0.9; }
-    25% { transform: translateY(25vh) translateX(-15px) rotate(70deg) scale(1.2); }
-    35% { transform: translateY(35vh) translateX(25px) rotate(110deg) scale(0.9); }
-    50% { transform: translateY(50vh) translateX(-20px) rotate(170deg) scale(1.1); }
-    65% { transform: translateY(65vh) translateX(30px) rotate(220deg) scale(0.8); }
-    80% { transform: translateY(80vh) translateX(-10px) rotate(280deg) scale(1); opacity: 0.8; }
-    95% { transform: translateY(95vh) translateX(5px) rotate(340deg) scale(0.9); opacity: 0.4; }
-    100% { transform: translateY(calc(100vh + 200px)) translateX(0px) rotate(380deg) scale(0.3); opacity: 0; }
-  }
-
-  @keyframes fall-drift {
-    0% { transform: translateY(-150px) translateX(0px) rotate(0deg) scale(0.5); opacity: 0; }
-    5% { transform: translateY(-100px) translateX(15px) rotate(5deg) scale(0.7); opacity: 0.8; }
-    15% { transform: translateY(10vh) translateX(-25px) rotate(25deg) scale(1); opacity: 0.9; }
-    25% { transform: translateY(25vh) translateX(35px) rotate(50deg) scale(1.1); }
-    35% { transform: translateY(35vh) translateX(-30px) rotate(80deg) scale(1); }
-    50% { transform: translateY(50vh) translateX(40px) rotate(120deg) scale(1.05); }
-    65% { transform: translateY(65vh) translateX(-35px) rotate(160deg) scale(0.95); }
-    80% { transform: translateY(80vh) translateX(25px) rotate(200deg) scale(1); opacity: 0.8; }
-    95% { transform: translateY(95vh) translateX(-15px) rotate(240deg) scale(0.9); opacity: 0.4; }
-    100% { transform: translateY(calc(100vh + 200px)) translateX(0px) rotate(280deg) scale(0.3); opacity: 0; }
-  }
-
-  @keyframes fall-spiral {
-    0% { transform: translateY(-150px) translateX(0px) rotate(0deg) scale(0.5); opacity: 0; }
-    5% { transform: translateY(-100px) translateX(8px) rotate(25deg) scale(0.7); opacity: 0.8; }
-    15% { transform: translateY(10vh) translateX(16px) rotate(75deg) scale(1); opacity: 0.9; }
-    25% { transform: translateY(25vh) translateX(8px) rotate(125deg) scale(1.1); }
-    35% { transform: translateY(35vh) translateX(-8px) rotate(175deg) scale(1); }
-    50% { transform: translateY(50vh) translateX(-16px) rotate(250deg) scale(1.05); }
-    65% { transform: translateY(65vh) translateX(-8px) rotate(325deg) scale(0.95); }
-    80% { transform: translateY(80vh) translateX(8px) rotate(400deg) scale(1); opacity: 0.8; }
-    95% { transform: translateY(95vh) translateX(16px) rotate(475deg) scale(0.9); opacity: 0.4; }
-    100% { transform: translateY(calc(100vh + 200px)) translateX(0px) rotate(550deg) scale(0.3); opacity: 0; }
-  }
+  /* Individual fruit variations for more natural movement */
+  .fruit-1 { animation-duration: 8s; font-size: 1.8rem; }
+  .fruit-2 { animation-duration: 10s; font-size: 2.2rem; }
+  .fruit-3 { animation-duration: 9s; font-size: 1.9rem; }
+  .fruit-4 { animation-duration: 11s; font-size: 2rem; }
+  .fruit-5 { animation-duration: 7s; font-size: 2.1rem; }
+  .fruit-6 { animation-duration: 12s; font-size: 1.7rem; }
+  .fruit-7 { animation-duration: 9.5s; font-size: 2.3rem; }
+  .fruit-8 { animation-duration: 8.5s; font-size: 1.8rem; }
+  .fruit-9 { animation-duration: 10.5s; font-size: 2rem; }
+  .fruit-10 { animation-duration: 7.5s; font-size: 2.2rem; }
+  .fruit-11 { animation-duration: 11.5s; font-size: 1.9rem; }
+  .fruit-12 { animation-duration: 9.2s; font-size: 2.1rem; }
+  .fruit-13 { animation-duration: 8.8s; font-size: 1.8rem; }
+  .fruit-14 { animation-duration: 10.8s; font-size: 2rem; }
+  .fruit-15 { animation-duration: 12.2s; font-size: 2.3rem; }
 
   /* Floating leaf animations for additional ambiance */
   @keyframes leaf-float {
@@ -369,103 +192,5 @@
 
   .leaf-float {
     animation: leaf-float 6s ease-in-out infinite;
-  }
-
-  /* Glassmorphism Effects */
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  }
-
-  .glass-effect-dark {
-    background: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-  }
-
-  .glass-hero {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.25) 0%, 
-      rgba(255, 255, 255, 0.15) 50%, 
-      rgba(255, 255, 255, 0.1) 100%);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4),
-                inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  /* Neumorphism Effects */
-  .neuro-card {
-    background: linear-gradient(145deg, #f0f0f0, #cacaca);
-    box-shadow: 20px 20px 40px #bebebe,
-                -20px -20px 40px #ffffff,
-                inset 2px 2px 5px rgba(255, 255, 255, 0.8),
-                inset -2px -2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    border: none;
-  }
-
-  .neuro-button {
-    background: linear-gradient(145deg, #f9f5eb, #e6d7b8);
-    box-shadow: 8px 8px 16px #d4c7a5,
-                -8px -8px 16px #ffffff,
-                inset 2px 2px 4px rgba(255, 255, 255, 0.9),
-                inset -2px -2px 4px rgba(0, 0, 0, 0.1);
-    border: none;
-    transition: all 0.3s ease;
-  }
-
-  .neuro-button:hover {
-    background: linear-gradient(145deg, #e6d7b8, #f9f5eb);
-    box-shadow: 4px 4px 8px #d4c7a5,
-                -4px -4px 8px #ffffff,
-                inset -2px -2px 4px rgba(255, 255, 255, 0.9),
-                inset 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-
-  .neuro-pressed {
-    box-shadow: inset 8px 8px 16px #d4c7a5,
-                inset -8px -8px 16px #ffffff;
-    transform: translateY(1px);
-  }
-
-  /* Advanced Glass Navigation */
-  .glass-nav {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.3) 0%, 
-      rgba(255, 255, 255, 0.2) 50%, 
-      rgba(255, 255, 255, 0.1) 100%);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                inset 0 -1px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  /* Floating Animation with Glass Effect */
-  .glass-float {
-    animation: glass-float 4s ease-in-out infinite;
-  }
-
-  @keyframes glass-float {
-    0%, 100% {
-      transform: translateY(0px) scale(1);
-      box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.2),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    }
-    50% {
-      transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 24px 80px 0 rgba(31, 38, 135, 0.3),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    }
   }
 }
