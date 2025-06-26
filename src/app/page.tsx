@@ -45,10 +45,10 @@ export default function Home() {
         </div>
 
         {/* Right side - Download content */}
-        <div className="flex-1 flex flex-col items-center justify-start pt-16 px-12">
+        <div className="flex-1 flex flex-col items-center justify-start pt-32 px-12">
           <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
           <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-          <div className="flex flex-row gap-4 justify-center items-center mb-6">
+          <div className="flex flex-row gap-4 justify-center items-center mb-8">
             <a href="#" className="transition transform hover:scale-105 inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto drop-shadow-xl"/>
             </a>
@@ -56,16 +56,11 @@ export default function Home() {
               <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-16 w-auto drop-shadow-xl"/>
             </a>
           </div>
-          <div className="flex justify-center relative">
+          <div className="flex justify-center relative mt-4">
             <img 
-              src="/app-ui-phone.png" 
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=800&fit=crop&crop=center" 
               alt="Phal Sutra Mobile App" 
-              className="h-48 md:h-64 block rounded-3xl shadow-2xl"
-              onError={(e) => {
-                console.log('Image failed to load:', e);
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=600&fit=crop&crop=center';
-              }}
-              onLoad={() => console.log('Image loaded successfully')}
+              className="h-72 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white"
             />
           </div>
         </div>
