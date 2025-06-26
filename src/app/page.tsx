@@ -14,24 +14,39 @@ const sections = [
 export default function Home() {
   return (
     <main className="relative min-h-screen w-full bg-gradient-to-b from-zinc-50 to-zinc-200 dark:from-[#273028] dark:to-[#171813]">
-      {/* Falling Fruits Animation Background */}
+      {/* Enhanced Falling Fruits Animation Background */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="falling-fruits-container">
-          {Array.from({ length: 15 }, (_, i) => (
+          {Array.from({ length: 25 }, (_, i) => (
             <div
               key={i}
-              className={`falling-fruit fruit-${i + 1}`}
+              className={`falling-fruit fruit-${(i % 15) + 1}`}
               style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${8 + Math.random() * 4}s`
+                animationDelay: `${Math.random() * 8}s`,
               }}
             >
-              {['🍎', '🍊', '🍌', '🥝', '🍇', '🍓', '🥭', '🍑'][Math.floor(Math.random() * 8)]}
+              {['🍎', '🍊', '🍌', '🥝', '🍇', '🍓', '🥭', '🍑', '🍒', '🍍', '🥥', '🍈', '🍉', '🫐', '🥑'][Math.floor(Math.random() * 15)]}
+            </div>
+          ))}
+          {/* Additional layer of smaller fruits */}
+          {Array.from({ length: 15 }, (_, i) => (
+            <div
+              key={`small-${i}`}
+              className="falling-fruit"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                fontSize: '1.2rem',
+                animation: `fall-spiral ${12 + Math.random() * 6}s ease-in-out infinite`,
+                opacity: 0.6
+              }}
+            >
+              {['🍓', '🫐', '🍒', '🥝'][Math.floor(Math.random() * 4)]}
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-yellow-50/40 to-green-50/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-green-50/30"></div>
       </div>
 
       {/* Sticky Luxurious Navigation with Logo */}
@@ -80,11 +95,28 @@ export default function Home() {
             </a>
           </div>
           <div className="flex justify-center relative mt-4">
-            <img 
-              src="/phal-sutra-app-mockup.png" 
-              alt="Phal Sutra Mobile App" 
-              className="h-80 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white object-contain"
-            />
+            <div className="relative">
+              <img 
+                src="/phal-sutra-app-mockup.png" 
+                alt="Phal Sutra Mobile App" 
+                className="h-80 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white object-contain bg-white"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "/app-ui-phone.png";
+                }}
+                onLoad={() => console.log('App mockup loaded successfully')}
+              />
+              {/* Fallback if both images fail */}
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-100 to-yellow-100 rounded-3xl border-4 border-white shadow-2xl opacity-0 transition-opacity duration-300" 
+                   style={{display: 'none'}} 
+                   id="fallback-placeholder">
+                <div className="text-center p-8">
+                  <div className="text-6xl mb-4">📱</div>
+                  <p className="text-gray-600 font-semibold">Phal Sutra App</p>
+                  <p className="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
