@@ -49,42 +49,137 @@ export default function Home() {
       </nav>
 
       {/* Sections */}
-      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10">
+      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10 overflow-hidden">
+        {/* Hero Background with Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50/60 via-orange-50/40 to-yellow-50/60 backdrop-blur-sm"></div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-yellow-200/30 to-orange-200/30 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-green-200/30 to-yellow-200/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-orange-200/20 to-red-200/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+
         {/* Left side - Logo and text content */}
-        <div className="flex-1 flex flex-col items-start justify-center px-12">
-          {/* Logo with transparent background */}
-          <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-white rounded-full opacity-0"></div>
-            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 rounded-full"/>
+        <div className="flex-1 flex flex-col items-start justify-center px-12 relative z-10">
+          {/* Premium Badge */}
+          <div className="mb-8 relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <div className="relative px-6 py-3 rounded-full bg-white/90 backdrop-blur-xl border border-gold-500/30 shadow-2xl">
+              <span className="text-sm uppercase tracking-[0.2em] font-bold bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+                ✨ Premium Quality Fruits
+              </span>
+            </div>
           </div>
+
+          {/* Logo with enhanced styling */}
+          <div className="mb-8 relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+            <div className="relative bg-white/80 backdrop-blur-xl rounded-full p-4 shadow-2xl border border-white/50">
+              <img src="/ff.png" alt="Phal Sutra Logo" className="h-40 w-40 object-contain relative z-10 rounded-full"/>
+            </div>
+          </div>
+
+          {/* Main heading with enhanced typography */}
           <div className="mb-6">
-            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+            <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-4 bg-gradient-to-r from-amber-800 via-orange-700 to-yellow-800 bg-clip-text text-transparent drop-shadow-2xl">
+              Phal Sutra
+            </h1>
+            <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
           </div>
-          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-          <span className="lux-tagline text-2xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-          <div className="flex gap-4">
-            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Premium fruit basket"/>
+
+          {/* Enhanced tagline */}
+          <div className="mb-8 relative">
+            <span className="lux-tagline text-2xl md:text-3xl block text-amber-900/90 leading-relaxed">
+              Where <span className="font-semibold text-orange-700">taste</span> meets{' '}
+              <span className="font-semibold text-yellow-700">luxury</span>
+              <br />
+              <span className="text-xl text-amber-700/80">Premium fruits. Effortless app experience.</span>
+            </span>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <span className="relative z-10">🛒 Start Shopping</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+            <button className="px-8 py-4 bg-white/80 backdrop-blur-xl text-amber-800 font-semibold rounded-xl border border-amber-300 hover:bg-white/90 transform hover:scale-105 transition-all duration-300 shadow-lg">
+              📱 Learn More
+            </button>
+          </div>
+
+          {/* Featured fruit preview */}
+          <div className="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/50 shadow-lg">
+            <div className="text-3xl">🥭</div>
+            <div>
+              <span className="text-sm font-semibold text-amber-800 block">Today's Special</span>
+              <span className="text-xs text-amber-600">Fresh Alphonso Mangoes</span>
+            </div>
           </div>
         </div>
 
-        {/* Right side - App UI */}
-        <div className="flex-1 flex flex-col items-center justify-center px-12">
-          <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Experience Our App</h2>
-          <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-          <div className="flex flex-row gap-4 justify-center items-center mb-8">
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto drop-shadow-xl"/>
+        {/* Right side - App UI with enhanced presentation */}
+        <div className="flex-1 flex flex-col items-center justify-center px-12 relative z-10">
+          {/* App showcase header */}
+          <div className="text-center mb-8">
+            <h2 className="lux-header text-3xl md:text-4xl mb-4 bg-gradient-to-r from-amber-800 to-orange-700 bg-clip-text text-transparent">
+              Experience Our App
+            </h2>
+            <span className="lux-tagline text-lg text-amber-700 block">
+              The luxury of every fruit, your way.
+              <br />
+              <span className="font-semibold">Get Phal Sutra now!</span>
+            </span>
+          </div>
+
+          {/* Download buttons with improved styling */}
+          <div className="flex flex-row gap-6 justify-center items-center mb-10">
+            <a href="#" className="group transition transform hover:scale-110 hover:rotate-1 duration-300 inline-block">
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-gray-800 to-black rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="relative h-14 w-auto drop-shadow-xl"/>
+              </div>
             </a>
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-16 w-auto drop-shadow-xl"/>
+            <a href="#" className="group transition transform hover:scale-110 hover:-rotate-1 duration-300 inline-block">
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="relative h-14 w-auto drop-shadow-xl"/>
+              </div>
             </a>
           </div>
-          <div className="flex justify-center relative mt-4">
-            <img 
-              src="/phal-sutra-app-mockup.png" 
-              alt="Phal Sutra Mobile App" 
-              className="h-80 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white object-contain"
-            />
+
+          {/* Phone mockup with enhanced styling */}
+          <div className="relative group">
+            {/* Glowing background effect */}
+            <div className="absolute -inset-8 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+            
+            {/* Phone frame */}
+            <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-2 rounded-[2.5rem] shadow-2xl">
+              <div className="bg-black rounded-[2rem] p-1">
+                <img 
+                  src="/ff.png" 
+                  alt="Phal Sutra Mobile App" 
+                  className="h-96 md:h-[28rem] w-auto block rounded-[1.8rem] object-cover shadow-inner"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=600&fit=crop&crop=center";
+                  }}
+                />
+              </div>
+              
+              {/* Phone details */}
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gray-600 rounded-full"></div>
+              <div className="absolute top-6 right-6 w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Floating UI elements */}
+            <div className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-xl rounded-lg p-3 shadow-lg animate-bounce">
+              <span className="text-xs font-semibold text-green-600">Live Orders: 1,247</span>
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-xl rounded-lg p-3 shadow-lg animate-bounce" style={{animationDelay: '0.5s'}}>
+              <span className="text-xs font-semibold text-orange-600">⭐ 4.9 Rating</span>
+            </div>
           </div>
         </div>
       </section>
