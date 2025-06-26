@@ -25,27 +25,10 @@ export default function Home() {
         ))}
       </nav>
       {/* Sections */}
-      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex flex-col items-center justify-center relative z-10">
-        {/* MERGED HOME/DOWNLOAD CONTENT */}
-        <div className="flex flex-col lg:flex-row items-center max-w-6xl w-full px-6 py-28 sm:py-32 gap-12">
-          {/* Left side - Text content */}
-          <div className="flex flex-col items-center text-center flex-1">
-            {/* Logo */}
-            <div className="mb-8">
-              <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-32 w-32 object-contain drop-shadow-lg"/>
-            </div>
-            <div className="mb-6">
-              <span className="px-4 py-2 rounded-xl uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
-            </div>
-            <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-            <span className="lux-tagline text-xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-            <div className="flex justify-center gap-5 mt-2">
-              <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-24 drop-shadow-2xl rounded-2xl border-4 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
-            </div>
-          </div>
-          
-          {/* Right side - Download content */}
-          <div className="flex flex-col items-center flex-1 max-w-md">
+      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex flex-col relative z-10">
+        {/* Top section - Download content */}
+        <div className="flex-1 flex flex-col items-center justify-center py-20">
+          <div className="flex flex-col items-center max-w-md">
             <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
             <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
             <div className="flex flex-row gap-4 justify-center items-center mb-6">
@@ -59,6 +42,22 @@ export default function Home() {
             <div className="flex justify-center relative">
               <img src="https://same-assets.com/ai/fruits/app-ui-mockup.png" alt="App UI" className="h-48 md:h-64 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
             </div>
+          </div>
+        </div>
+
+        {/* Bottom left - Logo and text content */}
+        <div className="absolute bottom-8 left-8 flex flex-col items-start text-left max-w-md">
+          {/* Logo */}
+          <div className="mb-4">
+            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-24 w-24 object-contain drop-shadow-lg"/>
+          </div>
+          <div className="mb-4">
+            <span className="px-3 py-1 rounded-lg uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+          </div>
+          <h1 className="lux-header text-3xl md:text-4xl mb-3 drop-shadow-lg">Phal Sutra</h1>
+          <span className="lux-tagline text-lg mb-4 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+          <div className="flex gap-3">
+            <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-16 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
