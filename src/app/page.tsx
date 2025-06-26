@@ -3,7 +3,7 @@
 const sections = [
   { id: 'home', label: 'Home' },
   { id: 'features', label: 'Features' },
-  { id: 'about', label: 'About' },
+  { id: 'how-it-works', label: 'How It Works' },
   { id: 'contact', label: 'Contact' }
 ];
 
@@ -269,33 +269,119 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="scroll-mt-20 py-20 relative z-10">
+      {/* Simple Process Section */}
+      <section id="how-it-works" className="scroll-mt-20 py-20 relative z-10">
         <div className="container mx-auto px-12">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="lux-header text-4xl md:text-5xl mb-8 drop-shadow-lg">
-                About <span className="text-green-600">Phal Sutra</span>
-              </h2>
-              <p className="text-xl mb-6 text-zinc-700">
-                We are revolutionizing the B2B fruit distribution industry by connecting retailers directly with trusted suppliers across India.
-              </p>
-              <p className="text-lg mb-8 text-zinc-600">
-                Our platform ensures fresh, quality fruits reach your store at competitive prices, backed by technology and a commitment to excellence.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-                  <div className="text-sm text-zinc-600">Suppliers</div>
+          <h2 className="lux-header text-4xl md:text-5xl text-center mb-8 drop-shadow-lg">
+            Simple <span className="text-green-600">Process</span>
+          </h2>
+          <p className="text-xl text-center mb-16 text-zinc-600">
+            How It Works - Get started with Phal Sutra in just three simple steps
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
+              <div className="h-20 w-20 mb-6 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                1
+              </div>
+              <h3 className="font-semibold text-2xl mb-4 text-gold-500">Register</h3>
+              <p className="text-zinc-700">Sign up for your Phal Sutra account and verify your business details to get started.</p>
+            </div>
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
+              <div className="h-20 w-20 mb-6 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                2
+              </div>
+              <h3 className="font-semibold text-2xl mb-4 text-gold-500">Compare Prices</h3>
+              <p className="text-zinc-700">Browse our extensive catalog and compare prices from multiple verified suppliers.</p>
+            </div>
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
+              <div className="h-20 w-20 mb-6 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                3
+              </div>
+              <h3 className="font-semibold text-2xl mb-4 text-gold-500">Place Orders</h3>
+              <p className="text-zinc-700">Select your fruits, choose delivery preferences, and place your order with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Love Section */}
+      <section className="py-20 relative z-10 bg-gradient-to-br from-green-50 to-yellow-50">
+        <div className="container mx-auto px-12">
+          <h2 className="lux-header text-4xl md:text-5xl text-center mb-8 drop-shadow-lg">
+            Customer <span className="text-green-600">Love</span>
+          </h2>
+          <p className="text-xl text-center mb-16 text-zinc-600">
+            What Our Retailers Say - Join thousands of satisfied fruit retailers who trust Phal Sutra for their business
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+              <div className="mb-6">
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">1000+</div>
-                  <div className="text-sm text-zinc-600">Retailers</div>
+                <p className="text-zinc-700 italic mb-6">"Phal Sutra helped me find the best suppliers! The quality is consistently excellent, and the prices are unbeatable!"</p>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  RK
+                </div>
+                <div>
+                  <div className="font-semibold text-zinc-800">Rajesh Kumar</div>
+                  <div className="text-sm text-zinc-600">Fresh Fruits Market, Bangalore</div>
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <img src="/ff.png" alt="Fresh Fruits" className="rounded-2xl shadow-2xl w-full h-auto"/>
+            {/* Testimonial 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+              <div className="mb-6">
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-zinc-700 italic mb-6">"The ordering process became so simple with Phal Sutra. Fresh deliveries every time!"</p>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  PS
+                </div>
+                <div>
+                  <div className="font-semibold text-zinc-800">Priya Sharma</div>
+                  <div className="text-sm text-zinc-600">Sharma Fruit Store, Bangalore</div>
+                </div>
+              </div>
+            </div>
+            {/* Testimonial 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+              <div className="mb-6">
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-zinc-700 italic mb-6">"Since working with Phal Sutra, our profit margins improved significantly!"</p>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  AS
+                </div>
+                <div>
+                  <div className="font-semibold text-zinc-800">Amit Singh</div>
+                  <div className="text-sm text-zinc-600">Singh Brothers Fruits, Bangalore</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -400,7 +486,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><a href="#home" className="hover:text-gold-500 transition-colors">Home</a></li>
                 <li><a href="#features" className="hover:text-gold-500 transition-colors">Features</a></li>
-                <li><a href="#about" className="hover:text-gold-500 transition-colors">About</a></li>
+                <li><a href="#how-it-works" className="hover:text-gold-500 transition-colors">How It Works</a></li>
                 <li><a href="#contact" className="hover:text-gold-500 transition-colors">Contact</a></li>
               </ul>
             </div>
