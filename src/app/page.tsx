@@ -157,7 +157,7 @@ export default function Home() {
           </div>
 
           {/* Right side feature highlights */}
-          <div className="absolute top-32 right-8 space-y-4 z-40">
+          <div className="absolute bottom-8 right-8 space-y-4 z-40">
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-3 shadow-lg flex items-center gap-2 animate-float-medium">
               <span className="text-xl">📱</span>
               <div className="text-sm font-semibold">Download Now</div>
