@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Sticky Luxurious Navigation with Logo and Login Button */}
       <nav className="fixed top-6 left-1/2 z-50 flex -translate-x-1/2 rounded-xl bg-white/70 dark:bg-black/40 backdrop-blur-lg px-6 py-2 shadow-lg gap-6 border border-zinc-100 dark:border-zinc-900 text-lg font-semibold tracking-wider items-center" style={{fontFamily: 'serif'}}>
-        <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-10 w-10 object-contain bg-transparent"/>
+        <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-12 w-12 object-contain bg-white rounded-full p-1 shadow-sm"/>
         {sections.map(sec => (
           <a
             key={sec.id}
@@ -71,10 +71,10 @@ export default function Home() {
       <section id="home" className="scroll-mt-20 min-h-[100dvh] flex relative z-10">
         {/* Left side - Logo and text content */}
         <div className="flex-1 flex flex-col items-start justify-center px-12">
-          {/* Logo with transparent background */}
+          {/* Logo with white background */}
           <div className="mb-8 relative">
-            <div className="absolute inset-0 bg-white rounded-full opacity-0"></div>
-            <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10"/>
+            <div className="absolute inset-0 bg-white rounded-full shadow-lg"></div>
+            <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 bg-white rounded-full p-4"/>
           </div>
           <div className="mb-6">
             <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">🍃 Connecting India's Freshest Fruits 🍊</span>
