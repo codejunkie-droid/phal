@@ -48,7 +48,7 @@ export default function Home() {
           <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
           <div className="flex flex-row gap-4 justify-center items-center mb-6">
             <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-16 w-auto drop-shadow-xl"/>
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 w-auto drop-shadow-xl"/>
             </a>
             <a href="#" className="transition transform hover:scale-105 inline-block">
               <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-16 w-auto drop-shadow-xl"/>
