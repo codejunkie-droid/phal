@@ -68,37 +68,63 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 pt-8">
             {/* Feature 1 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=100&h=100&fit=crop&crop=center" alt="Direct Sourcing" className="h-16 mb-3 animate-float-slow rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-slow rounded-full bg-green-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Direct Sourcing</h3>
               <span className="text-zinc-700 text-center">Connect directly with farmers and wholesalers for the freshest produce at competitive prices.</span>
             </div>
             {/* Feature 2 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=100&h=100&fit=crop&crop=center" alt="Price Comparison" className="h-16 mb-3 animate-float-medium rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-medium rounded-full bg-blue-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Real-Time Price Comparison</h3>
               <span className="text-zinc-700 text-center">Compare prices across multiple suppliers instantly to ensure the best deals for your business.</span>
             </div>
             {/* Feature 3 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center" alt="Seamless Ordering" className="h-16 mb-3 animate-float-fast rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-fast rounded-full bg-purple-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Seamless Ordering</h3>
               <span className="text-zinc-700 text-center">Place orders with just a few taps. Our intuitive interface makes bulk ordering simple and efficient.</span>
             </div>
             {/* Feature 4 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=100&h=100&fit=crop&crop=center" alt="Timely Delivery" className="h-16 mb-3 animate-float-medium rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-medium rounded-full bg-orange-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                  <path d="M3 4a1 1 0 00-1 1v1a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.5h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-9A.5.5 0 015 16v-1a.5.5 0 01.5-.5H7V8a1 1 0 00-1-1H3a1 1 0 00-1 1v6a1 1 0 001 1h1v1a2 2 0 002 2h8a2 2 0 002-2v-1h1a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Timely Delivery</h3>
               <span className="text-zinc-700 text-center">Reliable delivery network ensures your fruits arrive fresh and on time, every time.</span>
             </div>
             {/* Feature 5 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop&crop=center" alt="Quality Guarantee" className="h-16 mb-3 animate-float-slow rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-slow rounded-full bg-red-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Quality Guarantee</h3>
               <span className="text-zinc-700 text-center">Every fruit is quality-checked before delivery. Your satisfaction is our top priority.</span>
             </div>
             {/* Feature 6 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=100&h=100&fit=crop&crop=center" alt="24/7 Support" className="h-16 mb-3 animate-float-fast rounded-full" />
+              <div className="h-16 w-16 mb-3 animate-float-fast rounded-full bg-indigo-500 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg mb-2 text-gold-500">24/7 Support</h3>
               <span className="text-zinc-700 text-center">Our dedicated support team is always ready to help you with any questions or concerns.</span>
             </div>
