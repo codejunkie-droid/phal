@@ -26,37 +26,38 @@ export default function Home() {
       </nav>
       {/* Sections */}
       <section id="home" className="scroll-mt-36 min-h-[100dvh] flex flex-col items-center justify-center relative z-10">
-        {/* HOME/HERO CONTENT will go here */}
-        <div className="flex flex-col items-center max-w-3xl text-center px-6 py-28 sm:py-32">
-          <div className="mb-6">
-            <span className="px-4 py-2 rounded-xl uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+        {/* MERGED HOME/DOWNLOAD CONTENT */}
+        <div className="flex flex-col lg:flex-row items-center max-w-6xl w-full px-6 py-28 sm:py-32 gap-12">
+          {/* Left side - Text content */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+            <div className="mb-6">
+              <span className="px-4 py-2 rounded-xl uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+            </div>
+            <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Phal Sutra</h1>
+            <span className="lux-tagline text-xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+            <div className="flex justify-center lg:justify-start gap-5 mt-4">
+              <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-24 drop-shadow-2xl rounded-2xl border-4 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
+            </div>
           </div>
-          <h1 className="lux-header text-5xl md:text-6xl lg:text-7xl mb-6 drop-shadow-lg">Phal Sutra</h1>
-          <span className="lux-tagline text-xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-          <div className="flex justify-center gap-5 mt-4">
-            <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-24 drop-shadow-2xl rounded-2xl border-4 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
+          
+          {/* Right side - Download content */}
+          <div className="flex flex-col items-center flex-1 max-w-md">
+            <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
+            <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
+            <div className="flex flex-row gap-4 justify-center items-center mb-6">
+              <a href="#" className="transition transform hover:scale-105 inline-block">
+                <img src="https://same-assets.com/ai/fruits/apple-ios-download.png" alt="App Store" className="h-14 drop-shadow-xl"/>
+              </a>
+              <a href="#" className="transition transform hover:scale-105 inline-block">
+                <img src="https://same-assets.com/ai/fruits/google-play-download.png" alt="Google Play" className="h-14 drop-shadow-xl"/>
+              </a>
+            </div>
+            <div className="flex justify-center relative">
+              <img src="https://same-assets.com/ai/fruits/app-ui-mockup.png" alt="App UI" className="h-48 md:h-64 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
+            </div>
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
-      </section>
-      <section id="download" className="scroll-mt-36 min-h-[80dvh] flex flex-col items-center justify-center relative z-10">
-        {/* DOWNLOAD CONTENT will go here */}
-        <div className="flex flex-col items-center max-w-2xl w-full px-6 py-14 gap-8 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl">
-          <h2 className="lux-header text-3xl md:text-4xl mb-3">Download the App</h2>
-          <span className="lux-tagline mb-4">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-          <div className="flex flex-row gap-5 justify-center items-center mt-2 mb-2">
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://same-assets.com/ai/fruits/apple-ios-download.png" alt="App Store" className="h-16 drop-shadow-xl"/>
-            </a>
-            <a href="#" className="transition transform hover:scale-105 inline-block">
-              <img src="https://same-assets.com/ai/fruits/google-play-download.png" alt="Google Play" className="h-16 drop-shadow-xl"/>
-            </a>
-          </div>
-          <div className="mt-6 flex justify-center relative">
-            <img src="https://same-assets.com/ai/fruits/app-ui-mockup.png" alt="App UI" className="h-56 md:h-72 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
-            {/* Animated fruits drifting behind mockup placeholder */}
-          </div>
-        </div>
       </section>
       <section id="features" className="scroll-mt-36 min-h-[70dvh] flex flex-col items-center justify-center relative z-10">
         {/* FEATURES CONTENT will go here */}
