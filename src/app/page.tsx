@@ -14,52 +14,49 @@ export default function Home() {
       {/* Enhanced Falling Fruits Animation Background */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="falling-fruits-container">
-          {Array.from({ length: 25 }, (_, i) => (
-            <div
-              key={i}
-              className={`falling-fruit fruit-${(i % 15) + 1}`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 8}s`,
-              }}
-            >
-              {
-                [
-                  "🍎",
-                  "🍊",
-                  "🍌",
-                  "🥝",
-                  "🍇",
-                  "🍓",
-                  "🥭",
-                  "🍑",
-                  "🍒",
-                  "🍍",
-                  "🥥",
-                  "🍈",
-                  "🍉",
-                  "🫐",
-                  "🥑",
-                ][Math.floor(Math.random() * 15)]
-              }
-            </div>
-          ))}
+          {Array.from({ length: 25 }, (_, i) => {
+            const fruits = [
+              "🍎", "🍊", "🍌", "🥝", "🍇", "🍓", "🥭", "🍑", "🍒", "🍍", "🥥", "🍈", "🍉", "🫐", "🥑"
+            ];
+            const positions = [8, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 12, 27, 42, 57, 72, 88, 4, 19, 34, 49, 64, 78, 91, 6];
+            const delays = [0, 1.2, 2.4, 0.8, 3.6, 1.8, 4.2, 0.4, 2.8, 1.6, 3.2, 2.0, 4.8, 1.0, 3.4, 0.6, 2.6, 4.0, 1.4, 3.8, 0.2, 2.2, 4.4, 1.7, 3.0];
+            
+            return (
+              <div
+                key={i}
+                className={`falling-fruit fruit-${(i % 15) + 1}`}
+                style={{
+                  left: `${positions[i]}%`,
+                  animationDelay: `${delays[i]}s`,
+                }}
+              >
+                {fruits[i % 15]}
+              </div>
+            );
+          })}
           {/* Additional layer of smaller fruits */}
-          {Array.from({ length: 15 }, (_, i) => (
-            <div
-              key={`small-${i}`}
-              className="falling-fruit"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 10}s`,
-                fontSize: "1.2rem",
-                animation: `fall-spiral ${12 + Math.random() * 6}s ease-in-out infinite`,
-                opacity: 0.6,
-              }}
-            >
-              {["🍓", "🫐", "🍒", "🥝"][Math.floor(Math.random() * 4)]}
-            </div>
-          ))}
+          {Array.from({ length: 15 }, (_, i) => {
+            const smallFruits = ["🍓", "🫐", "🍒", "🥝"];
+            const positions = [10, 25, 40, 55, 70, 85, 18, 33, 48, 63, 78, 7, 22, 37, 52];
+            const delays = [2, 4, 6, 8, 1, 3, 5, 7, 9, 0.5, 1.5, 2.5, 3.5, 4.5, 5.5];
+            const durations = [12, 13, 14, 15, 16, 17, 13.5, 14.5, 15.5, 16.5, 17.5, 12.5, 13.2, 14.8, 16.2];
+            
+            return (
+              <div
+                key={`small-${i}`}
+                className="falling-fruit"
+                style={{
+                  left: `${positions[i]}%`,
+                  animationDelay: `${delays[i]}s`,
+                  fontSize: "1.2rem",
+                  animation: `fall-spiral ${durations[i]}s ease-in-out infinite`,
+                  opacity: 0.6,
+                }}
+              >
+                {smallFruits[i % 4]}
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -141,30 +138,30 @@ export default function Home() {
           </div>
 
           {/* Feature highlights near phone */}
-          <div className="absolute top-32 left-8 space-y-4 z-40">
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100 flex items-center gap-2 animate-float-slow">
-              <span className="text-xl">⚡</span>
-              <div className="text-sm font-semibold text-blue-600">Fast Delivery</div>
+          <div className="absolute top-28 left-4 space-y-3 z-40">
+            <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-blue-200 flex items-center gap-3 animate-float-slow hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-lg">⚡</div>
+              <div className="text-base font-bold text-blue-700">Fast Delivery</div>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-100 flex items-center gap-2 animate-float-medium">
-              <span className="text-xl">🔒</span>
-              <div className="text-sm font-semibold text-green-600">Secure Payment</div>
+            <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-green-200 flex items-center gap-3 animate-float-medium hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-lg">🔒</div>
+              <div className="text-base font-bold text-green-700">Secure Payment</div>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-yellow-100 flex items-center gap-2 animate-float-fast">
-              <span className="text-xl">✨</span>
-              <div className="text-sm font-semibold text-yellow-600">Premium Quality</div>
+            <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-yellow-200 flex items-center gap-3 animate-float-fast hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-white text-lg">✨</div>
+              <div className="text-base font-bold text-yellow-700">Premium Quality</div>
             </div>
           </div>
 
           {/* Right side feature highlights */}
-          <div className="absolute bottom-8 right-8 space-y-4 z-40">
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-3 shadow-lg flex items-center gap-2 animate-float-medium">
-              <span className="text-xl">📱</span>
-              <div className="text-sm font-semibold">Download Now</div>
+          <div className="absolute bottom-12 right-4 space-y-4 z-40">
+            <div className="bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 text-white rounded-2xl p-4 shadow-2xl flex items-center gap-3 animate-float-medium hover:scale-110 transition-all duration-300 cursor-pointer border-2 border-green-300">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl backdrop-blur-sm">📱</div>
+              <div className="text-lg font-bold">Download Now</div>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100 flex items-center gap-2 animate-float-slow">
-              <span className="text-xl">🎯</span>
-              <div className="text-sm font-semibold text-purple-600">Join 500+ Retailers</div>
+            <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-purple-200 flex items-center gap-3 animate-float-slow hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-lg">🎯</div>
+              <div className="text-base font-bold text-purple-700">Join 500+ Retailers</div>
             </div>
           </div>
 

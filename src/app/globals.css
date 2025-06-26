@@ -124,6 +124,26 @@
     animation: float-fast 2s ease-in-out infinite;
   }
 
+  /* Enhanced glow effects */
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.2); }
+  }
+
+  .glow-blue {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  /* Smooth hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
   /* Enhanced Falling Fruits Animation */
   .falling-fruits-container {
     position: absolute;
