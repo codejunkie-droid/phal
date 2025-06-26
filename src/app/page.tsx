@@ -137,10 +137,9 @@ export default function Home() {
             <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-xl"></div>
           </div>
 
-          {/* Feature highlights below phone - arranged in rows */}
-          <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 z-40 w-full max-w-4xl">
-            {/* First row - 3 features */}
-            <div className="flex justify-center gap-6 mb-4">
+          {/* Feature highlights below phone - single row */}
+          <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 z-40 w-full max-w-4xl">
+            <div className="flex justify-center gap-6">
               <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-blue-200 flex items-center gap-3 animate-float-slow hover:scale-105 transition-all duration-300 cursor-pointer">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-lg">⚡</div>
                 <div className="text-base font-bold text-blue-700">Fast Delivery</div>
@@ -152,18 +151,6 @@ export default function Home() {
               <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-yellow-200 flex items-center gap-3 animate-float-fast hover:scale-105 transition-all duration-300 cursor-pointer">
                 <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-white text-lg">✨</div>
                 <div className="text-base font-bold text-yellow-700">Premium Quality</div>
-              </div>
-            </div>
-            
-            {/* Second row - 2 features */}
-            <div className="flex justify-center gap-6">
-              <div className="bg-gradient-to-r from-green-500 via-green-600 to-emerald-600 text-white rounded-2xl p-4 shadow-2xl flex items-center gap-3 animate-float-medium hover:scale-110 transition-all duration-300 cursor-pointer border-2 border-green-300">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl backdrop-blur-sm">📱</div>
-                <div className="text-lg font-bold">Download Now</div>
-              </div>
-              <div className="bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border-2 border-purple-200 flex items-center gap-3 animate-float-slow hover:scale-105 transition-all duration-300 cursor-pointer">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-lg">🎯</div>
-                <div className="text-base font-bold text-purple-700">Join 500+ Retailers</div>
               </div>
             </div>
           </div>
