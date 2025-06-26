@@ -141,28 +141,28 @@ export default function Home() {
           </div>
 
           {/* Feature highlights near phone */}
-          <div className="absolute top-12 left-4 space-y-4">
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100 flex items-center gap-2">
+          <div className="absolute top-32 left-8 space-y-4 z-40">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100 flex items-center gap-2 animate-float-slow">
               <span className="text-xl">⚡</span>
               <div className="text-sm font-semibold text-blue-600">Fast Delivery</div>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-100 flex items-center gap-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-100 flex items-center gap-2 animate-float-medium">
               <span className="text-xl">🔒</span>
               <div className="text-sm font-semibold text-green-600">Secure Payment</div>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-yellow-100 flex items-center gap-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-yellow-100 flex items-center gap-2 animate-float-fast">
               <span className="text-xl">✨</span>
               <div className="text-sm font-semibold text-yellow-600">Premium Quality</div>
             </div>
           </div>
 
           {/* Right side feature highlights */}
-          <div className="absolute top-16 right-4 space-y-4">
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-3 shadow-lg flex items-center gap-2">
+          <div className="absolute top-32 right-8 space-y-4 z-40">
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-3 shadow-lg flex items-center gap-2 animate-float-medium">
               <span className="text-xl">📱</span>
               <div className="text-sm font-semibold">Download Now</div>
             </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100 flex items-center gap-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100 flex items-center gap-2 animate-float-slow">
               <span className="text-xl">🎯</span>
               <div className="text-sm font-semibold text-purple-600">Join 500+ Retailers</div>
             </div>
