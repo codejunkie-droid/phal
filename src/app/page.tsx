@@ -38,7 +38,7 @@ export default function Home() {
           <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg">Phal Sutra</h1>
           <span className="lux-tagline text-2xl mb-8 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
           <div className="flex gap-4">
-            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
+            <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop&crop=center" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Premium fruit basket"/>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
             </a>
           </div>
           <div className="flex justify-center relative">
-            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=400&fit=crop&crop=center" alt="App UI" className="h-48 md:h-64 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=600&fit=crop&crop=center" alt="Phal Sutra Mobile App" className="h-48 md:h-64 block rounded-3xl shadow-2xl border border-gold-500 bg-white/80"/>
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
@@ -68,37 +68,37 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 pt-8">
             {/* Feature 1 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1576179635662-9d1983e97e1e?w=100&h=100&fit=crop&crop=center" alt="Direct Sourcing" className="h-16 mb-3 animate-float-slow rounded-full" />
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=100&h=100&fit=crop&crop=center" alt="Direct Sourcing" className="h-16 mb-3 animate-float-slow rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Direct Sourcing</h3>
               <span className="text-zinc-700 text-center">Connect directly with farmers and wholesalers for the freshest produce at competitive prices.</span>
             </div>
             {/* Feature 2 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=100&h=100&fit=crop&crop=center" alt="Price Comparison" className="h-16 mb-3 animate-float-medium rounded-full" />
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=100&h=100&fit=crop&crop=center" alt="Price Comparison" className="h-16 mb-3 animate-float-medium rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Real-Time Price Comparison</h3>
               <span className="text-zinc-700 text-center">Compare prices across multiple suppliers instantly to ensure the best deals for your business.</span>
             </div>
             {/* Feature 3 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=100&h=100&fit=crop&crop=center" alt="Seamless Ordering" className="h-16 mb-3 animate-float-fast rounded-full" />
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center" alt="Seamless Ordering" className="h-16 mb-3 animate-float-fast rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Seamless Ordering</h3>
               <span className="text-zinc-700 text-center">Place orders with just a few taps. Our intuitive interface makes bulk ordering simple and efficient.</span>
             </div>
             {/* Feature 4 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1566402141678-d4d8d4ac8047?w=100&h=100&fit=crop&crop=center" alt="Timely Delivery" className="h-16 mb-3 animate-float-medium rounded-full" />
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=100&h=100&fit=crop&crop=center" alt="Timely Delivery" className="h-16 mb-3 animate-float-medium rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Timely Delivery</h3>
               <span className="text-zinc-700 text-center">Reliable delivery network ensures your fruits arrive fresh and on time, every time.</span>
             </div>
             {/* Feature 5 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=100&h=100&fit=crop&crop=center" alt="Quality Guarantee" className="h-16 mb-3 animate-float-slow rounded-full" />
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop&crop=center" alt="Quality Guarantee" className="h-16 mb-3 animate-float-slow rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">Quality Guarantee</h3>
               <span className="text-zinc-700 text-center">Every fruit is quality-checked before delivery. Your satisfaction is our top priority.</span>
             </div>
             {/* Feature 6 */}
             <div className="flex flex-col items-center p-5 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative">
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop&crop=center" alt="24/7 Support" className="h-16 mb-3 animate-float-fast rounded-full" />
+              <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=100&h=100&fit=crop&crop=center" alt="24/7 Support" className="h-16 mb-3 animate-float-fast rounded-full" />
               <h3 className="font-semibold text-lg mb-2 text-gold-500">24/7 Support</h3>
               <span className="text-zinc-700 text-center">Our dedicated support team is always ready to help you with any questions or concerns.</span>
             </div>
