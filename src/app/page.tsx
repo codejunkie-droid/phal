@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         {/* Right side - Download content */}
-        <div className="flex-1 flex flex-col items-center justify-center px-12">
+        <div className="flex-1 flex flex-col items-center justify-start pt-16 px-12">
           <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
           <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
           <div className="flex flex-row gap-4 justify-center items-center mb-6">
@@ -55,7 +55,7 @@ export default function Home() {
             </a>
           </div>
           <div className="flex justify-center relative">
-            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=300&h=600&fit=crop&crop=center" alt="Phal Sutra Mobile App" className="h-48 md:h-64 block rounded-3xl shadow-2xl border border-gold-500 bg-white/80"/>
+            <img src="/app-ui-phone.png" alt="Phal Sutra Mobile App" className="h-48 md:h-64 block rounded-3xl shadow-2xl"/>
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
