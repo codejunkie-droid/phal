@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Sticky Luxurious Navigation with Logo and Login Button */}
       <nav className="fixed top-6 left-1/2 z-50 flex -translate-x-1/2 rounded-xl bg-white/70 dark:bg-black/40 backdrop-blur-lg px-6 py-2 shadow-lg gap-6 border border-zinc-100 dark:border-zinc-900 text-lg font-semibold tracking-wider items-center" style={{fontFamily: 'serif'}}>
-        <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-10 w-10 object-contain rounded-full bg-transparent"/>
+        <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-10 w-10 object-contain bg-transparent"/>
         {sections.map(sec => (
           <a
             key={sec.id}
@@ -74,7 +74,7 @@ export default function Home() {
           {/* Logo with transparent background */}
           <div className="mb-8 relative">
             <div className="absolute inset-0 bg-white rounded-full opacity-0"></div>
-            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10 rounded-full"/>
+            <img src="/phal-sutra-logo.png" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg relative z-10"/>
           </div>
           <div className="mb-6">
             <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">🍃 Connecting India's Freshest Fruits 🍊</span>
