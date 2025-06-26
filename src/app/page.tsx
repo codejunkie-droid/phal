@@ -4,6 +4,7 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'features', label: 'Features' },
   { id: 'how-it-works', label: 'How It Works' },
+  { id: 'reviews', label: 'Reviews' },
   { id: 'contact', label: 'Contact' }
 ];
 
@@ -308,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* Customer Love Section */}
-      <section className="py-20 relative z-10 bg-gradient-to-br from-green-50 to-yellow-50">
+      <section id="reviews" className="scroll-mt-20 py-20 relative z-10 bg-gradient-to-br from-green-50 to-yellow-50">
         <div className="container mx-auto px-12">
           <h2 className="lux-header text-4xl md:text-5xl text-center mb-8 drop-shadow-lg">
             Customer <span className="text-green-600">Love</span>
