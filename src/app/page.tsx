@@ -14,18 +14,24 @@ const sections = [
 export default function Home() {
   return (
     <main className="relative min-h-screen w-full bg-gradient-to-b from-zinc-50 to-zinc-200 dark:from-[#273028] dark:to-[#171813]">
-      {/* Background Video */}
-      <div className="fixed inset-0 z-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          className="w-full h-full object-cover opacity-20"
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23f0f0f0'/%3E%3C/svg%3E"
-        >
-          <source src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          <div className="w-full h-full bg-gradient-to-br from-orange-100 via-yellow-50 to-green-100 opacity-30"></div>
-        </video>
+      {/* Falling Fruits Animation Background */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="falling-fruits-container">
+          {Array.from({ length: 15 }, (_, i) => (
+            <div
+              key={i}
+              className={`falling-fruit fruit-${i + 1}`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${8 + Math.random() * 4}s`
+              }}
+            >
+              {['🍎', '🍊', '🍌', '🥝', '🍇', '🍓', '🥭', '🍑'][Math.floor(Math.random() * 8)]}
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-yellow-50/40 to-green-50/40"></div>
       </div>
 
       {/* Sticky Luxurious Navigation with Logo */}
@@ -84,8 +90,13 @@ export default function Home() {
       </section>
 
       <section id="features" className="scroll-mt-36 min-h-[80dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-yellow-50/30 to-green-50/30 rounded-3xl mx-8"></div>
+        {/* Background overlay with floating fruits */}
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-yellow-50/30 to-green-50/30 rounded-3xl mx-8">
+          <div className="absolute top-10 left-10 text-4xl opacity-20 leaf-float">🍃</div>
+          <div className="absolute top-20 right-20 text-3xl opacity-25 leaf-float" style={{animationDelay: '1s'}}>🍊</div>
+          <div className="absolute bottom-20 left-20 text-3xl opacity-20 leaf-float" style={{animationDelay: '2s'}}>🥭</div>
+          <div className="absolute bottom-10 right-10 text-4xl opacity-25 leaf-float" style={{animationDelay: '0.5s'}}>🍃</div>
+        </div>
         
         <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-12 lux-blur-bg shadow-xl rounded-2xl border border-gold-500 relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-2">Why Choose Phal Sutra?</h2>
@@ -158,8 +169,13 @@ export default function Home() {
       </section>
 
       <section id="how-it-works" className="scroll-mt-36 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-l from-green-50/30 via-yellow-50/30 to-orange-50/30 rounded-3xl mx-8"></div>
+        {/* Background overlay with floating fruits */}
+        <div className="absolute inset-0 bg-gradient-to-l from-green-50/30 via-yellow-50/30 to-orange-50/30 rounded-3xl mx-8">
+          <div className="absolute top-16 left-16 text-3xl opacity-20 leaf-float">🍌</div>
+          <div className="absolute top-32 right-16 text-4xl opacity-25 leaf-float" style={{animationDelay: '1.5s'}}>🍃</div>
+          <div className="absolute bottom-24 left-24 text-3xl opacity-20 leaf-float" style={{animationDelay: '3s'}}>🍇</div>
+          <div className="absolute bottom-16 right-24 text-3xl opacity-25 leaf-float" style={{animationDelay: '2.5s'}}>🥝</div>
+        </div>
         
         <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-4">How It Works</h2>
@@ -185,8 +201,14 @@ export default function Home() {
       </section>
 
       <section id="contact" className="scroll-mt-36 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 via-orange-50/30 to-red-50/30 rounded-3xl mx-8"></div>
+        {/* Background overlay with floating fruits */}
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 via-orange-50/30 to-red-50/30 rounded-3xl mx-8">
+          <div className="absolute top-12 left-12 text-4xl opacity-25 leaf-float">🍓</div>
+          <div className="absolute top-20 right-12 text-3xl opacity-20 leaf-float" style={{animationDelay: '2s'}}>🍃</div>
+          <div className="absolute bottom-20 left-16 text-3xl opacity-25 leaf-float" style={{animationDelay: '1s'}}>🍑</div>
+          <div className="absolute bottom-12 right-16 text-4xl opacity-20 leaf-float" style={{animationDelay: '3.5s'}}>🍃</div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl opacity-15 leaf-float" style={{animationDelay: '4s'}}>🥭</div>
+        </div>
         
         <div className="flex flex-col items-center max-w-4xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-4">Get In Touch</h2>
