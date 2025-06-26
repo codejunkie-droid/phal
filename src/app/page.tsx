@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -61,6 +60,9 @@ export default function Home() {
             {sec.label}
           </a>
         ))}
+        <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+          Login
+        </button>
       </nav>
 
       {/* Sections */}
@@ -100,7 +102,7 @@ export default function Home() {
               <div className="absolute top-6 right-6 text-2xl opacity-60">🍎</div>
               <div className="absolute bottom-4 left-6 text-2xl opacity-60">🍇</div>
               <div className="absolute bottom-6 right-4 text-2xl opacity-60">🥝</div>
-              
+
               {/* Phone mockup */}
               <div className="relative bg-black rounded-3xl p-3 shadow-xl">
                 <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-80 w-56 flex flex-col items-center justify-center">
@@ -131,7 +133,7 @@ export default function Home() {
           <div className="absolute bottom-20 left-20 text-3xl opacity-20 leaf-float" style={{animationDelay: '2s'}}>🥭</div>
           <div className="absolute bottom-10 right-10 text-4xl opacity-25 leaf-float" style={{animationDelay: '0.5s'}}>🍃</div>
         </div>
-        
+
         <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-12 lux-blur-bg shadow-xl rounded-2xl border border-gold-500 relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-2">Why Choose Phal Sutra?</h2>
           <span className="lux-tagline mb-6 text-center">We provide everything you need to streamline your fruit sourcing and boost your business.</span>
@@ -210,7 +212,7 @@ export default function Home() {
           <div className="absolute bottom-24 left-24 text-3xl opacity-20 leaf-float" style={{animationDelay: '3s'}}>🍇</div>
           <div className="absolute bottom-16 right-24 text-3xl opacity-25 leaf-float" style={{animationDelay: '2.5s'}}>🥝</div>
         </div>
-        
+
         <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-4">How It Works</h2>
           <span className="lux-tagline mb-6">Get started with Phal Sutra in just three simple steps</span>
@@ -243,11 +245,11 @@ export default function Home() {
           <div className="absolute bottom-12 right-16 text-4xl opacity-20 leaf-float" style={{animationDelay: '3.5s'}}>🍃</div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl opacity-15 leaf-float" style={{animationDelay: '4s'}}>🥭</div>
         </div>
-        
+
         <div className="flex flex-col items-center max-w-4xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
           <h2 className="lux-header text-3xl md:text-4xl mb-4">Get In Touch</h2>
           <span className="lux-tagline mb-6">Ready to revolutionize your fruit business? Contact us today!</span>
-          
+
           <div className="grid md:grid-cols-2 gap-12 w-full">
             {/* Contact Form */}
             <div className="w-full">
@@ -316,7 +318,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <h3 className="font-semibold text-xl text-gold-500 mb-4">Business Hours</h3>
                 <div className="space-y-2 text-zinc-700">
@@ -328,7 +330,7 @@ export default function Home() {
 
               <div className="text-center">
                 <h3 className="font-semibold text-xl text-gold-500 mb-4">Quick Response</h3>
-                <p className="text-zinc-700">We typically respond to all inquiries within 24 hours during business days.</p>
+                <p className="text-zinc-700">We typically respond toall inquiries within 24 hours during business days.</p>
               </div>
             </div>
           </div>
