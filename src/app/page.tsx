@@ -25,39 +25,37 @@ export default function Home() {
         ))}
       </nav>
       {/* Sections */}
-      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex flex-col relative z-10">
-        {/* Top section - Download content */}
-        <div className="flex-1 flex flex-col items-center justify-center py-20">
-          <div className="flex flex-col items-center max-w-md">
-            <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
-            <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
-            <div className="flex flex-row gap-4 justify-center items-center mb-6">
-              <a href="#" className="transition transform hover:scale-105 inline-block">
-                <img src="https://same-assets.com/ai/fruits/apple-ios-download.png" alt="App Store" className="h-14 drop-shadow-xl"/>
-              </a>
-              <a href="#" className="transition transform hover:scale-105 inline-block">
-                <img src="https://same-assets.com/ai/fruits/google-play-download.png" alt="Google Play" className="h-14 drop-shadow-xl"/>
-              </a>
-            </div>
-            <div className="flex justify-center relative">
-              <img src="https://same-assets.com/ai/fruits/app-ui-mockup.png" alt="App UI" className="h-48 md:h-64 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
-            </div>
+      <section id="home" className="scroll-mt-36 min-h-[100dvh] flex relative z-10">
+        {/* Left side - Logo and text content (bigger) */}
+        <div className="flex-1 flex flex-col items-center justify-center px-8">
+          {/* Logo - bigger */}
+          <div className="mb-8">
+            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-48 w-48 object-contain drop-shadow-lg"/>
+          </div>
+          <div className="mb-6">
+            <span className="px-4 py-2 rounded-xl uppercase text-sm tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
+          </div>
+          <h1 className="lux-header text-6xl md:text-7xl lg:text-8xl mb-6 drop-shadow-lg text-center">Phal Sutra</h1>
+          <span className="lux-tagline text-2xl mb-8 block text-center">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
+          <div className="flex gap-4">
+            <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-20 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
           </div>
         </div>
 
-        {/* Bottom left - Logo and text content */}
-        <div className="absolute bottom-8 left-8 flex flex-col items-start text-left max-w-md">
-          {/* Logo */}
-          <div className="mb-4">
-            <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-24 w-24 object-contain drop-shadow-lg"/>
+        {/* Right side - Download content (moved up and right) */}
+        <div className="absolute top-16 right-8 flex flex-col items-center max-w-sm">
+          <h2 className="lux-header text-2xl md:text-3xl mb-4 text-center">Download the App</h2>
+          <span className="lux-tagline mb-6 text-center">The luxury of every fruit, your way.<br />Get Phal Sutra now!</span>
+          <div className="flex flex-row gap-4 justify-center items-center mb-6">
+            <a href="#" className="transition transform hover:scale-105 inline-block">
+              <img src="https://same-assets.com/ai/fruits/apple-ios-download.png" alt="App Store" className="h-14 drop-shadow-xl"/>
+            </a>
+            <a href="#" className="transition transform hover:scale-105 inline-block">
+              <img src="https://same-assets.com/ai/fruits/google-play-download.png" alt="Google Play" className="h-14 drop-shadow-xl"/>
+            </a>
           </div>
-          <div className="mb-4">
-            <span className="px-3 py-1 rounded-lg uppercase text-xs tracking-widest bg-gold-100 lux-blur-bg text-gold-500 font-bold border border-gold-500 shadow-lg">Fruits redefined</span>
-          </div>
-          <h1 className="lux-header text-3xl md:text-4xl mb-3 drop-shadow-lg">Phal Sutra</h1>
-          <span className="lux-tagline text-lg mb-4 block">Where taste meets luxury.<br />Premium fruits. Effortless app experience.</span>
-          <div className="flex gap-3">
-            <img src="https://same-assets.com/ai/fruits/mixed-fancy-basket.png" className="h-16 drop-shadow-2xl rounded-xl border-2 border-white/70 dark:border-zinc-900 lux-blur-bg" alt="Luxury fruit basket"/>
+          <div className="flex justify-center relative">
+            <img src="https://same-assets.com/ai/fruits/app-ui-mockup.png" alt="App UI" className="h-48 md:h-64 block rounded-2xl shadow-2xl border border-gold-500 bg-white/80"/>
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
