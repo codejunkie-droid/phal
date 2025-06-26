@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center relative mt-4">
             <img 
-              src="/app-ui-phone.png" 
+              src="/phal-sutra-app-mockup.png" 
               alt="Phal Sutra Mobile App" 
               className="h-72 md:h-96 w-auto block rounded-3xl shadow-2xl border-4 border-white"
             />
