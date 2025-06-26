@@ -1,14 +1,10 @@
+'use client';
 
-"use client";
-
-import React from "react";
-
-// Section anchors
 const sections = [
-  { id: "home", label: "Home" },
-  { id: "features", label: "Features" },
-  { id: "how-it-works", label: "How it Works" },
-  { id: "contact", label: "Contact" }
+  { id: 'home', label: 'Home' },
+  { id: 'features', label: 'Features' },
+  { id: 'about', label: 'About' },
+  { id: 'contact', label: 'Contact' }
 ];
 
 export default function Home() {
@@ -46,10 +42,14 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-green-50/30"></div>
       </div>
 
-      {/* Sticky Luxurious Navigation with Logo */}
+      {/* Gradient overlays */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 to-green-50/30"></div>
+      </div>
+
+      {/* Sticky Luxurious Navigation with Logo and Login Button */}
       <nav className="fixed top-6 left-1/2 z-50 flex -translate-x-1/2 rounded-xl bg-white/70 dark:bg-black/40 backdrop-blur-lg px-6 py-2 shadow-lg gap-6 border border-zinc-100 dark:border-zinc-900 text-lg font-semibold tracking-wider items-center" style={{fontFamily: 'serif'}}>
         <img src="/logo-phal.jpeg" alt="Phal Sutra Logo" className="h-10 w-10 object-contain rounded-full bg-transparent"/>
         {sections.map(sec => (
@@ -61,6 +61,9 @@ export default function Home() {
             {sec.label}
           </a>
         ))}
+        <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg font-medium">
+          Login
+        </button>
       </nav>
 
       {/* Sections */}
@@ -100,139 +103,106 @@ export default function Home() {
             <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-xl"></div>
           </div>
 
-          {/* Main content container */}
-          <div className="relative z-10 flex flex-col items-center space-y-8">
-            {/* Top section with stats */}
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-green-100 text-center transform hover:scale-105 transition-all">
-                <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-                <div className="text-sm text-gray-600">Happy Retailers</div>
+          {/* Floating statistics cards */}
+          <div className="absolute top-16 left-8 bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-green-100">
+            <div className="text-2xl font-bold text-green-600">1000+</div>
+            <div className="text-sm text-gray-600">Active Retailers</div>
+          </div>
+
+          <div className="absolute bottom-32 right-8 bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-orange-100">
+            <div className="text-2xl font-bold text-orange-600">50+</div>
+            <div className="text-sm text-gray-600">Fruit Varieties</div>
+          </div>
+
+          {/* Enhanced Phone mockup with surrounding elements */}
+          <div className="relative">
+            {/* Floating fruit elements around phone */}
+            <div className="absolute -top-8 -left-8 animate-bounce" style={{animationDelay: '0s'}}>
+              <div className="bg-orange-100 rounded-full p-3 shadow-lg">
+                <span className="text-2xl">🍊</span>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100 text-center transform hover:scale-105 transition-all">
-                <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
-                <div className="text-sm text-gray-600">Fruit Varieties</div>
+            </div>
+            <div className="absolute -top-4 -right-12 animate-bounce" style={{animationDelay: '1s'}}>
+              <div className="bg-red-100 rounded-full p-3 shadow-lg">
+                <span className="text-2xl">🍎</span>
+              </div>
+            </div>
+            <div className="absolute -bottom-8 -left-12 animate-bounce" style={{animationDelay: '2s'}}>
+              <div className="bg-purple-100 rounded-full p-3 shadow-lg">
+                <span className="text-2xl">🍇</span>
+              </div>
+            </div>
+            <div className="absolute -bottom-4 -right-8 animate-bounce" style={{animationDelay: '0.5s'}}>
+              <div className="bg-green-100 rounded-full p-3 shadow-lg">
+                <span className="text-2xl">🥝</span>
               </div>
             </div>
 
-            {/* Enhanced Phone mockup with surrounding elements */}
-            <div className="relative">
-              {/* Floating fruit elements around phone */}
-              <div className="absolute -top-8 -left-8 animate-bounce" style={{animationDelay: '0s'}}>
-                <div className="bg-orange-100 rounded-full p-3 shadow-lg">
-                  <span className="text-2xl">🍊</span>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-12 animate-bounce" style={{animationDelay: '1s'}}>
-                <div className="bg-red-100 rounded-full p-3 shadow-lg">
-                  <span className="text-2xl">🍎</span>
-                </div>
-              </div>
-              <div className="absolute -bottom-8 -left-12 animate-bounce" style={{animationDelay: '2s'}}>
-                <div className="bg-purple-100 rounded-full p-3 shadow-lg">
-                  <span className="text-2xl">🍇</span>
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -right-8 animate-bounce" style={{animationDelay: '0.5s'}}>
-                <div className="bg-green-100 rounded-full p-3 shadow-lg">
-                  <span className="text-2xl">🥝</span>
-                </div>
-              </div>
+            {/* Main phone container with enhanced styling */}
+            <div className="relative bg-gradient-to-br from-green-50 via-yellow-50 to-orange-50 rounded-3xl p-8 shadow-2xl border border-green-200">
+              {/* Decorative patterns */}
+              <div className="absolute top-4 left-4 w-6 h-6 bg-green-200 rounded-full opacity-30"></div>
+              <div className="absolute top-8 right-4 w-4 h-4 bg-yellow-200 rounded-full opacity-40"></div>
+              <div className="absolute bottom-8 left-6 w-5 h-5 bg-orange-200 rounded-full opacity-35"></div>
+              <div className="absolute bottom-4 right-6 w-3 h-3 bg-red-200 rounded-full opacity-45"></div>
 
-              {/* Main phone container with enhanced styling */}
-              <div className="relative bg-gradient-to-br from-green-50 via-yellow-50 to-orange-50 rounded-3xl p-8 shadow-2xl border border-green-200">
-                {/* Decorative patterns */}
-                <div className="absolute top-4 left-4 w-6 h-6 bg-green-200 rounded-full opacity-30"></div>
-                <div className="absolute top-8 right-4 w-4 h-4 bg-yellow-200 rounded-full opacity-40"></div>
-                <div className="absolute bottom-8 left-6 w-5 h-5 bg-orange-200 rounded-full opacity-35"></div>
-                <div className="absolute bottom-4 right-6 w-3 h-3 bg-red-200 rounded-full opacity-45"></div>
-                
-                {/* Phone mockup */}
-                <div className="relative bg-gradient-to-b from-gray-800 to-black rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-all duration-300">
-                  {/* Phone screen */}
-                  <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-96 w-64 flex flex-col items-center justify-center relative overflow-hidden">
-                    {/* Background pattern on screen */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute top-4 left-4 text-4xl">🍃</div>
-                      <div className="absolute top-12 right-8 text-3xl">🌿</div>
-                      <div className="absolute bottom-12 left-6 text-3xl">🍃</div>
-                      <div className="absolute bottom-4 right-4 text-4xl">🌿</div>
+              {/* Phone mockup */}
+              <div className="relative bg-gradient-to-b from-gray-800 to-black rounded-3xl p-4 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                {/* Phone screen */}
+                <div className="bg-gradient-to-br from-green-100 to-yellow-100 rounded-2xl p-8 h-96 w-64 flex flex-col items-center justify-center relative overflow-hidden">
+                  {/* Background pattern on screen */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-4 left-4 text-4xl">🍃</div>
+                    <div className="absolute top-12 right-8 text-3xl">🌿</div>
+                    <div className="absolute bottom-12 left-6 text-3xl">🍃</div>
+                    <div className="absolute bottom-4 right-4 text-4xl">🌿</div>
+                  </div>
+
+                  {/* Screen content */}
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="mb-6">
+                      <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse">
+                        <span className="text-white text-3xl">🍎</span>
+                      </div>
                     </div>
-                    
-                    {/* Screen content */}
-                    <div className="relative z-10 flex flex-col items-center">
-                      <div className="mb-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse">
-                          <span className="text-white text-3xl">🍎</span>
-                        </div>
+                    <h3 className="font-bold text-2xl text-gray-800 mb-2">Phal Sutra App</h3>
+                    <p className="text-sm text-gray-600 text-center mb-6 px-4">Fresh fruits at your fingertips with real-time pricing</p>
+
+                    {/* App interface elements */}
+                    <div className="w-full px-4 space-y-3 mb-6">
+                      <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
+                        <div className="w-4 h-4 bg-green-400 rounded-full"></div>
+                        <div className="text-xs text-gray-600">Fresh Apples - ₹120/kg</div>
                       </div>
-                      <h3 className="font-bold text-2xl text-gray-800 mb-2">Phal Sutra App</h3>
-                      <p className="text-sm text-gray-600 text-center mb-6 px-4">Fresh fruits at your fingertips with real-time pricing</p>
-                      
-                      {/* App interface elements */}
-                      <div className="w-full px-4 space-y-3 mb-6">
-                        <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
-                          <div className="w-4 h-4 bg-green-400 rounded-full"></div>
-                          <div className="text-xs text-gray-600">Fresh Apples - ₹120/kg</div>
-                        </div>
-                        <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
-                          <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
-                          <div className="text-xs text-gray-600">Oranges - ₹80/kg</div>
-                        </div>
+                      <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
+                        <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
+                        <div className="text-xs text-gray-600">Premium Oranges - ₹80/kg</div>
                       </div>
-                      
-                      <div className="flex gap-2">
-                        <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
-                        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                        <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      <div className="bg-white/60 rounded-lg p-2 flex items-center gap-2">
+                        <div className="w-4 h-4 bg-purple-400 rounded-full"></div>
+                        <div className="text-xs text-gray-600">Fresh Grapes - ₹150/kg</div>
                       </div>
+                    </div>
+
+                    {/* Call to action */}
+                    <div className="bg-green-500 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-md">
+                      Order Now
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Bottom section with features */}
-            <div className="grid grid-cols-3 gap-4 mt-8">
-              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
-                <div className="text-2xl mb-2">⚡</div>
-                <div className="text-xs text-gray-600 font-medium">Fast Delivery</div>
-              </div>
-              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
-                <div className="text-2xl mb-2">🔒</div>
-                <div className="text-xs text-gray-600 font-medium">Secure Payment</div>
-              </div>
-              <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md text-center transform hover:scale-105 transition-all">
-                <div className="text-2xl mb-2">✨</div>
-                <div className="text-xs text-gray-600 font-medium">Premium Quality</div>
-              </div>
-            </div>
-
-            {/* Call to action badges */}
-            <div className="flex gap-4 mt-6">
-              <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold border border-green-200 animate-pulse">
-                📱 Download Now
-              </span>
-              <span className="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold border border-orange-200">
-                🎯 Join 500+ Retailers
-              </span>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="features" className="scroll-mt-20 min-h-[80dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay with floating fruits */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-yellow-50/30 to-green-50/30 rounded-3xl mx-8">
-          <div className="absolute top-10 left-10 text-4xl opacity-20 leaf-float">🍃</div>
-          <div className="absolute top-20 right-20 text-3xl opacity-25 leaf-float" style={{animationDelay: '1s'}}>🍊</div>
-          <div className="absolute bottom-20 left-20 text-3xl opacity-20 leaf-float" style={{animationDelay: '2s'}}>🥭</div>
-          <div className="absolute bottom-10 right-10 text-4xl opacity-25 leaf-float" style={{animationDelay: '0.5s'}}>🍃</div>
-        </div>
-        
-        <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-12 lux-blur-bg shadow-xl rounded-2xl border border-gold-500 relative z-10">
-          <h2 className="lux-header text-3xl md:text-4xl mb-2">Why Choose Phal Sutra?</h2>
-          <span className="lux-tagline mb-6 text-center">We provide everything you need to streamline your fruit sourcing and boost your business.</span>
-          <div className="grid md:grid-cols-3 gap-8 pt-8 w-full">
+      {/* Features Section */}
+      <section id="features" className="scroll-mt-20 py-20 relative z-10">
+        <div className="container mx-auto px-12">
+          <h2 className="lux-header text-4xl md:text-5xl text-center mb-16 drop-shadow-lg">
+            Why Choose <span className="text-green-600">Phal Sutra</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
               <div className="h-16 w-16 mb-4 animate-float-slow rounded-full bg-green-500 flex items-center justify-center">
@@ -251,102 +221,101 @@ export default function Home() {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
               </div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Real-Time Price Comparison</h3>
-              <span className="text-zinc-700 text-center flex-grow">Compare prices across multiple suppliers instantly to ensure the best deals for your business.</span>
+              <h3 className="font-semibold text-lg mb-3 text-gold-500">Real-time Pricing</h3>
+              <span className="text-zinc-700 text-center flex-grow">Get live market prices and make informed purchasing decisions with our dynamic pricing system.</span>
             </div>
             {/* Feature 3 */}
             <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
               <div className="h-16 w-16 mb-4 animate-float-fast rounded-full bg-purple-500 flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd"/>
-                </svg>
-              </div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Seamless Ordering</h3>
-              <span className="text-zinc-700 text-center flex-grow">Place orders with just a few taps. Our intuitive interface makes bulk ordering simple and efficient.</span>
-            </div>
-            {/* Feature 4 */}
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="h-16 w-16 mb-4 animate-float-medium rounded-full bg-orange-500 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
-                  <path d="M3 4a1 1 0 00-1 1v1a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.5h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-9A.5.5 0 015 16v-1a.5.5 0 01.5-.5H7V8a1 1 0 00-1-1H3a1 1 0 00-1 1v6a1 1 0 001 1h1v1a2 2 0 002 2h8a2 2 0 002-2v-1h1a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
-                </svg>
-              </div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Timely Delivery</h3>
-              <span className="text-zinc-700 text-center flex-grow">Reliable delivery network ensures your fruits arrive fresh and on time, every time.</span>
-            </div>
-            {/* Feature 5 */}
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="h-16 w-16 mb-4 animate-float-slow rounded-full bg-red-500 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-3 text-gold-500">Quality Guarantee</h3>
-              <span className="text-zinc-700 text-center flex-grow">Every fruit is quality-checked before delivery. Your satisfaction is our top priority.</span>
+              <span className="text-zinc-700 text-center flex-grow">Every fruit is quality-checked and comes with our freshness guarantee for your peace of mind.</span>
             </div>
-            {/* Feature 6 */}
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="h-16 w-16 mb-4 animate-float-fast rounded-full bg-indigo-500 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="scroll-mt-20 py-20 relative z-10">
+        <div className="container mx-auto px-12">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="lux-header text-4xl md:text-5xl mb-8 drop-shadow-lg">
+                About <span className="text-green-600">Phal Sutra</span>
+              </h2>
+              <p className="text-xl mb-6 text-zinc-700">
+                We are revolutionizing the B2B fruit distribution industry by connecting retailers directly with trusted suppliers across India.
+              </p>
+              <p className="text-lg mb-8 text-zinc-600">
+                Our platform ensures fresh, quality fruits reach your store at competitive prices, backed by technology and a commitment to excellence.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+                  <div className="text-sm text-zinc-600">Suppliers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">1000+</div>
+                  <div className="text-sm text-zinc-600">Retailers</div>
+                </div>
               </div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">24/7 Support</h3>
-              <span className="text-zinc-700 text-center flex-grow">Our dedicated support team is always ready to help you with any questions or concerns.</span>
+            </div>
+            <div className="relative">
+              <img src="/ff.png" alt="Fresh Fruits" className="rounded-2xl shadow-2xl w-full h-auto"/>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" className="scroll-mt-20 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay with floating fruits */}
-        <div className="absolute inset-0 bg-gradient-to-l from-green-50/30 via-yellow-50/30 to-orange-50/30 rounded-3xl mx-8">
-          <div className="absolute top-16 left-16 text-3xl opacity-20 leaf-float">🍌</div>
-          <div className="absolute top-32 right-16 text-4xl opacity-25 leaf-float" style={{animationDelay: '1.5s'}}>🍃</div>
-          <div className="absolute bottom-24 left-24 text-3xl opacity-20 leaf-float" style={{animationDelay: '3s'}}>🍇</div>
-          <div className="absolute bottom-16 right-24 text-3xl opacity-25 leaf-float" style={{animationDelay: '2.5s'}}>🥝</div>
-        </div>
-        
-        <div className="flex flex-col items-center max-w-6xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
-          <h2 className="lux-header text-3xl md:text-4xl mb-4">How It Works</h2>
-          <span className="lux-tagline mb-6">Get started with Phal Sutra in just three simple steps</span>
-          <div className="grid md:grid-cols-3 gap-8 pt-8 w-full">
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="text-5xl font-bold text-gold-500 mb-4">1</div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Register & Verify</h3>
-              <span className="text-zinc-700 text-center flex-grow">Sign up for your Phal Sutra account and verify your business details to get started with premium fruit sourcing.</span>
+      {/* Contact Section */}
+      <section id="contact" className="scroll-mt-20 py-20 relative z-10">
+        <div className="container mx-auto px-12">
+          <h2 className="lux-header text-4xl md:text-5xl text-center mb-16 drop-shadow-lg">
+            Get in <span className="text-green-600">Touch</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-gold-500">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-medium">Email</div>
+                    <div className="text-zinc-600">support@phalsutra.com</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-medium">Phone</div>
+                    <div className="text-zinc-600">+91 98765 43210</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-medium">Address</div>
+                    <div className="text-zinc-600">Mumbai, India</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="text-5xl font-bold text-gold-500 mb-4">2</div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Browse & Compare</h3>
-              <span className="text-zinc-700 text-center flex-grow">Browse our extensive catalog and compare prices from multiple verified suppliers to find the best deals.</span>
-            </div>
-            <div className="flex flex-col items-center p-8 rounded-2xl bg-gold-100 shadow hover:shadow-gold-300/40 transition relative min-h-[280px] justify-between">
-              <div className="text-5xl font-bold text-gold-500 mb-4">3</div>
-              <h3 className="font-semibold text-lg mb-3 text-gold-500">Order & Receive</h3>
-              <span className="text-zinc-700 text-center flex-grow">Select your fruits, choose delivery preferences, and place your order with confidence. Fresh delivery guaranteed.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="scroll-mt-20 min-h-[70dvh] flex flex-col items-center justify-center relative z-10 py-20">
-        {/* Background overlay with floating fruits */}
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 via-orange-50/30 to-red-50/30 rounded-3xl mx-8">
-          <div className="absolute top-12 left-12 text-4xl opacity-25 leaf-float">🍓</div>
-          <div className="absolute top-20 right-12 text-3xl opacity-20 leaf-float" style={{animationDelay: '2s'}}>🍃</div>
-          <div className="absolute bottom-20 left-16 text-3xl opacity-25 leaf-float" style={{animationDelay: '1s'}}>🍑</div>
-          <div className="absolute bottom-12 right-16 text-4xl opacity-20 leaf-float" style={{animationDelay: '3.5s'}}>🍃</div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl opacity-15 leaf-float" style={{animationDelay: '4s'}}>🥭</div>
-        </div>
-        
-        <div className="flex flex-col items-center max-w-4xl w-full px-8 py-16 gap-10 lux-blur-bg shadow-2xl border-gold-500 border rounded-2xl relative z-10">
-          <h2 className="lux-header text-3xl md:text-4xl mb-4">Get In Touch</h2>
-          <span className="lux-tagline mb-6">Ready to revolutionize your fruit business? Contact us today!</span>
-          
-          <div className="grid md:grid-cols-2 gap-12 w-full">
-            {/* Contact Form */}
             <div className="w-full">
               <form className="w-full space-y-6">
                 <div>
@@ -371,100 +340,59 @@ export default function Home() {
                   <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-message">
                     Message
                   </label>
-                  <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" placeholder="Tell us about your business needs..." rows={4}></textarea>
+                  <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-32 resize-none" id="grid-message" placeholder="Your message here..."></textarea>
                 </div>
-                <div className="flex justify-center">
-                  <button className="bg-gold-500 hover:bg-gold-700 text-white font-bold py-3 px-8 rounded focus:outline-none focus:shadow-outline transform hover:scale-105 transition-all" type="button">
-                    Send Message
-                  </button>
-                </div>
+                <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg w-full">
+                  Send Message
+                </button>
               </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="w-full space-y-8">
-              <div className="text-center">
-                <h3 className="font-semibold text-xl text-gold-500 mb-4">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                      </svg>
-                    </div>
-                    <span className="text-zinc-700">support@phalsutra.com</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                      </svg>
-                    </div>
-                    <span className="text-zinc-700">+91 98765 43210</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span className="text-zinc-700">Mumbai, Maharashtra, India</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <h3 className="font-semibold text-xl text-gold-500 mb-4">Business Hours</h3>
-                <div className="space-y-2 text-zinc-700">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <h3 className="font-semibold text-xl text-gold-500 mb-4">Quick Response</h3>
-                <p className="text-zinc-700">We typically respond to all inquiries within 24 hours during business days.</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="w-full py-8 text-center text-zinc-500 text-sm bg-zinc-100 dark:bg-zinc-900 relative z-10">
-        <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
-          <div>
-            <h3 className="font-semibold text-lg text-gold-500 mb-4">Phal Sutra</h3>
-            <p className="text-zinc-700 dark:text-zinc-300">Connecting freshness with retail. Your trusted partner in fruit distribution.</p>
+      {/* Footer */}
+      <footer className="relative z-10 bg-zinc-900 text-white py-16">
+        <div className="container mx-auto px-12">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="font-semibold text-lg text-gold-500 mb-4">Phal Sutra</h3>
+              <p className="text-zinc-300 mb-4">Connecting freshness with retail across India.</p>
+              <div className="flex space-x-4">
+                <a href="#" className="hover:text-gold-500 transition-colors">📘</a>
+                <a href="#" className="hover:text-gold-500 transition-colors">🐦</a>
+                <a href="#" className="hover:text-gold-500 transition-colors">📷</a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gold-500 mb-4">Quick Links</h3>
+              <ul className="space-y-2">
+                <li><a href="#home" className="hover:text-gold-500 transition-colors">Home</a></li>
+                <li><a href="#features" className="hover:text-gold-500 transition-colors">Features</a></li>
+                <li><a href="#about" className="hover:text-gold-500 transition-colors">About</a></li>
+                <li><a href="#contact" className="hover:text-gold-500 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gold-500 mb-4">Legal</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-gold-500 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-gold-500 transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-gold-500 transition-colors">Refund Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg text-gold-500 mb-4">Contact</h3>
+              <ul className="space-y-2">
+                <li className="text-zinc-300">Email: support@phalsutra.com</li>
+                <li className="text-zinc-300">Phone: +91 98765 43210</li>
+                <li className="text-zinc-300">Address: Mumbai, India</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="font-semibold text-lg text-gold-500 mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#features" className="hover:text-gold-500 transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="hover:text-gold-500 transition-colors">How it Works</a></li>
-              <li><a href="#contact" className="hover:text-gold-500 transition-colors">Contact</a></li>
-            </ul>
+          <div className="mt-8 pt-4 border-t border-zinc-800 text-center">
+            <p className="text-zinc-500">&copy; {new Date().getFullYear()} Phal Sutra. All rights reserved.</p>
           </div>
-          <div>
-            <h3 className="font-semibold text-lg text-gold-500 mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gold-500 transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-gold-500 transition-colors">Refund Policy</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-lg text-gold-500 mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-zinc-700 dark:text-zinc-300">Email: support@phalsutra.com</li>
-              <li className="text-zinc-700 dark:text-zinc-300">Phone: +91 98765 43210</li>
-              <li className="text-zinc-700 dark:text-zinc-300">Address: Mumbai, India</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8 pt-4 border-t border-zinc-200 dark:border-zinc-800 text-center">
-          <p className="text-zinc-500">&copy; {new Date().getFullYear()} Phal Sutra. All rights reserved. Made with ❤️ for fresh produce retailers.</p>
         </div>
       </footer>
     </main>
