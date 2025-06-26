@@ -55,7 +55,16 @@ export default function Home() {
             </a>
           </div>
           <div className="flex justify-center relative">
-            <img src="/app-ui-phone.png" alt="Phal Sutra Mobile App" className="h-48 md:h-64 block rounded-3xl shadow-2xl"/>
+            <img 
+              src="/app-ui-phone.png" 
+              alt="Phal Sutra Mobile App" 
+              className="h-48 md:h-64 block rounded-3xl shadow-2xl"
+              onError={(e) => {
+                console.log('Image failed to load:', e);
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&h=600&fit=crop&crop=center';
+              }}
+              onLoad={() => console.log('Image loaded successfully')}
+            />
           </div>
         </div>
         {/* BACKGROUND FRUIT ANIMATION here */}
