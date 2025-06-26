@@ -140,15 +140,32 @@ export default function Home() {
             <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-xl"></div>
           </div>
 
-          {/* Floating statistics cards */}
-          <div className="absolute top-16 left-8 bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-green-100">
-            <div className="text-2xl font-bold text-green-600">1000+</div>
-            <div className="text-sm text-gray-600">Active Retailers</div>
+          {/* Feature highlights near phone */}
+          <div className="absolute top-12 left-4 space-y-4">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-blue-100 flex items-center gap-2">
+              <span className="text-xl">⚡</span>
+              <div className="text-sm font-semibold text-blue-600">Fast Delivery</div>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-100 flex items-center gap-2">
+              <span className="text-xl">🔒</span>
+              <div className="text-sm font-semibold text-green-600">Secure Payment</div>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-yellow-100 flex items-center gap-2">
+              <span className="text-xl">✨</span>
+              <div className="text-sm font-semibold text-yellow-600">Premium Quality</div>
+            </div>
           </div>
 
-          <div className="absolute bottom-32 right-8 bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-orange-100">
-            <div className="text-2xl font-bold text-orange-600">50+</div>
-            <div className="text-sm text-gray-600">Fruit Varieties</div>
+          {/* Right side feature highlights */}
+          <div className="absolute top-16 right-4 space-y-4">
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-3 shadow-lg flex items-center gap-2">
+              <span className="text-xl">📱</span>
+              <div className="text-sm font-semibold">Download Now</div>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-purple-100 flex items-center gap-2">
+              <span className="text-xl">🎯</span>
+              <div className="text-sm font-semibold text-purple-600">Join 500+ Retailers</div>
+            </div>
           </div>
 
           {/* Enhanced Phone mockup with surrounding elements */}
